@@ -1,0 +1,45 @@
+From 50ba312a3e95afddd29c9abdb1e903c50479ba27 Mon Sep 17 00:00:00 2001
+From: Andrew Jeffery <andrew@aj.id.au>
+Date: Tue, 28 Aug 2018 17:37:33 +0930
+Subject: [PATCH] arm: dts: aspeed: Witherspoon can use coprocessor for FSI
+
+Signed-off-by: Andrew Jeffery <andrew@aj.id.au>
+---
+ arch/arm/boot/dts/aspeed-bmc-opp-witherspoon.dts | 12 ++++++++++--
+ 1 file changed, 10 insertions(+), 2 deletions(-)
+
+diff --git a/arch/arm/boot/dts/aspeed-bmc-opp-witherspoon.dts b/arch/arm/boot/dts/aspeed-bmc-opp-witherspoon.dts
+index b44d086c8662..d86094643f93 100644
+--- a/arch/arm/boot/dts/aspeed-bmc-opp-witherspoon.dts
++++ b/arch/arm/boot/dts/aspeed-bmc-opp-witherspoon.dts
+@@ -33,6 +33,11 @@
+ 			compatible = "shared-dma-pool";
+ 			reusable;
+ 		};
++
++		coldfire_memory: codefire_memory@9ef00000 {
++			reg = <0x9ef00000 0x00100000>;
++			no-map;
++		};
+ 	};
+ 
+ 	gpio-keys {
+@@ -157,10 +162,13 @@
+ 	};
+ 
+ 	fsi: gpio-fsi {
+-		compatible = "fsi-master-gpio", "fsi-master";
++		compatible = "aspeed,ast2500-cf-fsi-master", "fsi-master";
+ 		#address-cells = <2>;
+ 		#size-cells = <0>;
+-		no-gpio-delays;
++
++		memory-region = <&coldfire_memory>;
++		aspeed,sram = <&sram>;
++		aspeed,cvic = <&cvic>;
+ 
+ 		clock-gpios = <&gpio ASPEED_GPIO(AA, 0) GPIO_ACTIVE_HIGH>;
+ 		data-gpios = <&gpio ASPEED_GPIO(E, 0) GPIO_ACTIVE_HIGH>;
+-- 
+2.17.1
+
