@@ -4,15 +4,12 @@ PR = "r1"
 inherit obmc-phosphor-license
 inherit allarch
 
-FILESEXTRAPATHS_prepend := \
-"${THISDIR}/../../../../../../meta-phosphor/common/recipes-phosphor/ipmi/phosphor-ipmi-config/:"
-
 SRC_URI = " \
     file://cipher_list.json \
-    file://witherspoon/dcmi_cap.json \
-    file://witherspoon/dcmi_sensors.json \
-    file://witherspoon/dev_id.json \
-    file://witherspoon/power_reading.json \
+    file://dcmi_cap.json \
+    file://dcmi_sensors.json \
+    file://dev_id.json \
+    file://power_reading.json \
     "
 
 FILES_${PN} = " \
@@ -59,7 +56,7 @@ python do_patch() {
         auxVer = count[0] + "0000"
 
     workdir = d.getVar('WORKDIR', True)
-    file = os.path.join(workdir, 'witherspoon/', 'dev_id.json')
+    file = os.path.join(workdir, 'dev_id.json')
 
     # Update dev_id.json with the auxiliary firmware revision
     with open(file, "r+") as jsonFile:
@@ -74,12 +71,12 @@ do_install() {
     install -d ${D}${datadir}/ipmi-providers
     install -m 0644 -D ${WORKDIR}/cipher_list.json \
         ${D}${datadir}/ipmi-providers/cipher_list.json
-    install -m 0644 -D ${WORKDIR}/witherspoon/dcmi_cap.json \
+    install -m 0644 -D ${WORKDIR}/dcmi_cap.json \
         ${D}${datadir}/ipmi-providers/dcmi_cap.json
-    install -m 0644 -D ${WORKDIR}/witherspoon/dcmi_sensors.json \
+    install -m 0644 -D ${WORKDIR}/dcmi_sensors.json \
         ${D}${datadir}/ipmi-providers/dcmi_sensors.json
-    install -m 0644 -D ${WORKDIR}/witherspoon/dev_id.json \
+    install -m 0644 -D ${WORKDIR}/dev_id.json \
         ${D}${datadir}/ipmi-providers/dev_id.json
-    install -m 0644 -D ${WORKDIR}/witherspoon/power_reading.json \
+    install -m 0644 -D ${WORKDIR}/power_reading.json \
         ${D}${datadir}/ipmi-providers/power_reading.json
 }
