@@ -16,7 +16,6 @@ BBLAYERS ?= " \
   ##OEROOT##/meta-phosphor \
   ##OEROOT##/meta-aspeed \
   ##OEROOT##/meta-openpower \
-  ##OEROOT##/meta-ibm \
   ##OEROOT##/meta-ibm/meta-romulus \
   "
 BBLAYERS_NON_REMOVABLE ?= " \
@@ -30,6 +29,5 @@ BBLAYERS_NON_REMOVABLE ?= " \
   ##OEROOT##/meta-phosphor \
   ##OEROOT##/meta-aspeed \
   ##OEROOT##/meta-openpower \
-  ##OEROOT##/meta-ibm \
   ##OEROOT##/meta-ibm/meta-romulus \
   "
