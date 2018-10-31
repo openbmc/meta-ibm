@@ -566,6 +566,7 @@ events:
                     type: bool
                     value: true
           matches:
+              - name: interfacesRemoved
               - name: interfacesAdded
               - name: propertiesChanged
           events:
