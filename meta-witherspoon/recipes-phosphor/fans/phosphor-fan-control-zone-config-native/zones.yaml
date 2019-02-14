@@ -16,6 +16,28 @@ zone_configuration:
       default_floor: 8000
       increase_delay: 5
       decrease_interval: 30
+      interfaces:
+          - name: xyz.openbmc_project.Control.ThermalMode
+            properties:
+                - name: Supported
+                  type: array[string]
+                  values:
+                      - value: Default
+                        description: Default thermal control mode
+                      - value: Custom
+                        description: >
+                            Custom thermal control mode for handling the use of
+                            optical cables located behind the GPU exhaust that
+                            could produce overtemp warnings without this mode
+                            enabled.
+                - name: Current
+                  type: string
+                  values:
+                      - value: Default
+                        description: >
+                            Set current thermal control mode to the
+                            default which will be replaced on startup if
+                            another selected mode was persisted.
 
 #Water cooled zones
 - zone_conditions:
@@ -30,3 +52,18 @@ zone_configuration:
       default_floor: 8000
       increase_delay: 5
       decrease_interval: 30
+      interfaces:
+          - name: xyz.openbmc_project.Control.ThermalMode
+            properties:
+                - name: Supported
+                  type: array[string]
+                  values:
+                      - value: Default
+                        description: Default thermal control mode
+                - name: Current
+                  type: string
+                  values:
+                      - value: Default
+                        description: >
+                            Set current thermal control mode to the
+                            default. No other modes are supported.
