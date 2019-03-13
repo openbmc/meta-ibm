@@ -8,7 +8,7 @@ inherit obmc-phosphor-systemd
 
 RDEPENDS_${PN} += "virtual/obmc-gpio-monitor"
 
-SYNC_SERVICE = "witherspoon-power-supply-sync.service"
+SYNC_SERVICE = "power-supply-sync.service"
 TGTFMT = "obmc-chassis-poweron@0.target"
 SYNC_FMT = "../${SYNC_SERVICE}:${TGTFMT}.wants/${SYNC_SERVICE}"
 

@@ -6,5 +6,5 @@ After=obmc-power-on@0.target
 Conflicts=obmc-chassis-poweroff@0.target
 
 [Service]
-ExecStart=/usr/bin/env witherspoon-pseq-monitor -a runtime-monitor -i 500
-SyslogIdentifier=witherspoon-pseq-monitor
+ExecStart=/usr/bin/env pseq-monitor -a runtime-monitor -i 500
+SyslogIdentifier=pseq-monitor

@@ -1,5 +1,5 @@
 HOMEPAGE = "https://github.com/openbmc/witherspoon-pfault-analysis"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://${S}/LICENSE;md5=e3fc50a88d0a364313df4b21ef20c29e"
-SRC_URI += "git://github.com/openbmc/witherspoon-pfault-analysis"
-SRCREV = "61a041938115d402dbd17b6b970aed690f8f1e5c"
+SRC_URI += "git://github.com/openbmc/witherspoon-pfault-analysis;nobranch=1"
+SRCREV = "643bb981c78063fad5284e023a139798e7773392"
