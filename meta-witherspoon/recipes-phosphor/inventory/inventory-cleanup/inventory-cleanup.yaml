@@ -36,3 +36,24 @@ events:
                 - /system/chassis/motherboard/fan1/fan1_0
                 - /system/chassis/motherboard/fan1/fan1_1
                 - /system/chassis/motherboard/fan1
+    - name: Default cooling type
+      description: >
+          Default the cooling type to air cooled only
+      type: startup
+      actions:
+          - name: setProperty
+            paths:
+                - /system/chassis
+            interface: xyz.openbmc_project.Inventory.Decorator.CoolingType
+            property: AirCooled
+            value:
+                value: true
+                type: boolean
+          - name: setProperty
+            paths:
+                - /system/chassis
+            interface: xyz.openbmc_project.Inventory.Decorator.CoolingType
+            property: WaterCooled
+            value:
+                value: false
+                type: boolean
