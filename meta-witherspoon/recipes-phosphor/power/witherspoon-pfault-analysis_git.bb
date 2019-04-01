@@ -35,7 +35,7 @@ PSU_MONITOR_INSTFMT = "witherspoon-power-supply-monitor@{0}.service"
 PSU_MONITOR_TGT = "${SYSTEMD_DEFAULT_TARGET}"
 PSU_MONITOR_FMT = "../${PSU_MONITOR_TMPL}:${PSU_MONITOR_TGT}.requires/${PSU_MONITOR_INSTFMT}"
 
-FILES_witherspoon-psu-monitor = "${sbindir}/witherspoon-psu-monitor"
+FILES_witherspoon-psu-monitor = "${bindir}/witherspoon-psu-monitor"
 SYSTEMD_SERVICE_${PN} += "${PSU_MONITOR_TMPL}"
 SYSTEMD_LINK_${PN} += "${@compose_list(d, 'PSU_MONITOR_FMT', 'OBMC_POWER_SUPPLY_INSTANCES')}"
 
