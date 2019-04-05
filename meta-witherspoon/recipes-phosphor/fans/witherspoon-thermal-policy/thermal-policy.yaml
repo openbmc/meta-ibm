@@ -1,7 +1,8 @@
 # Witherspoon thermal policy for PDM.
 #
 # Shut down a Witherspoon system if more than three POWER9 cores
-# have a temperature greater than 115 degrees Celcius.
+# have a temperature greater than 115 degrees Celcius or the ambient
+# temperature is at/above 45 degrees Celcius.
 
 
 - name: core sensors
@@ -107,9 +108,18 @@
     - meta: SENSOR
       path: /xyz/openbmc_project/sensors/temperature/p1_core23_temp
 
-- name: core temp
+- name: ambient sensors
   description: >
-    'Monitor the temperature of each core.'
+    'Witherspoon has a single ambient sensor.'
+  class: group
+  group: path
+  members:
+    - meta: SENSOR
+      path: /xyz/openbmc_project/sensors/temperature/ambient
+
+- name: temp
+  description: >
+    'Monitor the temperature of each sensor in a group.'
   class: group
   group: property
   type: int64
@@ -124,33 +134,67 @@
   class: watch
   watch: property
   paths: core sensors
-  properties: core temp
-  callback: check temps
+  properties: temp
+  callback: check core temps
 
-- name: check temps
+- name: check core temps
   description: >
     'If this condition passes at least three cores are running
     too hot.  Shut the system down.'
   class: condition
   condition: count
   paths: core sensors
-  properties: core temp
-  callback: log and shutdown
+  properties: temp
+  callback: core log and shutdown
   countop: '>='
   countbound: 3
   op: '>='
   bound: 115000
   oneshot: true
 
-- name: log and shutdown
+- name: watch ambient temps
+  description: >
+    'Trigger logic on ambient temp changes.'
+  class: watch
+  watch: property
+  paths: ambient sensors
+  properties: temp
+  callback: check ambient temps
+
+- name: check ambient temps
+  description: >
+    'If this condition passes, the ambient temperature is too high.
+    Shut the system down.'
+  class: condition
+  condition: count
+  paths: ambient sensors
+  properties: temp
+  callback: ambient log and shutdown
+  countop: '=='
+  countbound: 1
+  op: '>='
+  bound: 45000
+  oneshot: true
+
+- name: core log and shutdown
   description: >
     'Shut the system down and log an event.'
   class: callback
   callback: group
   members:
     - shutdown
-    - create criticalhigh error
-    - create shutdown error
+    - create core criticalhigh error
+    - create core shutdown error
+
+- name: ambient log and shutdown
+  description: >
+    'Shut the system down and log an event.'
+  class: callback
+  callback: group
+  members:
+    - shutdown
+    - create ambient criticalhigh error
+    - create ambient shutdown error
 
 - name: shutdown
   description: >
@@ -167,21 +211,40 @@
     - value: replace
       type: string
 
-- name: create criticalhigh error
+- name: create core criticalhigh error
   description: >
-    'Create a CriticalHigh Error log.'
+    'Create a critical high error log for core temperatures.'
   class: callback
   callback: elog_with_metadata
   paths: core sensors
-  properties: core temp
+  properties: temp
   error: xyz::openbmc_project::Sensor::Threshold::Error::CriticalHigh
   metadata: xyz::openbmc_project::Sensor::Threshold::CriticalHigh::SENSOR_DATA
 
-- name: create shutdown error
+- name: create core shutdown error
   description: >
-    'Create a SystemShutdown Error log.'
+    'Create a processor system shutdown error log.'
   class: callback
   callback: elog
   paths: core sensors
-  properties: core temp
+  properties: temp
   error: xyz::openbmc_project::State::Shutdown::ThermalEvent::Error::Processor
+
+- name: create ambient criticalhigh error
+  description: >
+    'Create a critical high error log for ambient temperature.'
+  class: callback
+  callback: elog_with_metadata
+  paths: ambient sensors
+  properties: temp
+  error: xyz::openbmc_project::Sensor::Threshold::Error::CriticalHigh
+  metadata: xyz::openbmc_project::Sensor::Threshold::CriticalHigh::SENSOR_DATA
+
+- name: create ambient shutdown error
+  description: >
+    'Create an ambient system shutdown error log.'
+  class: callback
+  callback: elog
+  paths: ambient sensors
+  properties: temp
+  error: xyz::openbmc_project::State::Shutdown::ThermalEvent::Error::Ambient
