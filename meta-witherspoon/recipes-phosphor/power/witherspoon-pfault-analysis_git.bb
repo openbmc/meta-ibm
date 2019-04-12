@@ -18,7 +18,10 @@ DEPENDS += " \
          openpower-dbus-interfaces \
          sdbus++-native \
          sdeventplus \
+         power-sequencer-native \
          "
+
+EXTRA_OECONF = "UCD90160_DEF_YAML_FILE=${STAGING_DIR_NATIVE}${datadir}/ucd90160.yaml"
 
 CHASSIS_ON_TGT = "obmc-chassis-poweron@0.target"
 SEQ_MONITOR_SVC = "pseq-monitor.service"
