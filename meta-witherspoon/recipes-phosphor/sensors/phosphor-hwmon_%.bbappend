@@ -20,6 +20,11 @@ CHIPS_witherspoon = " \
                bus@1e78a000/i2c-bus@380/tmp275@4a \
                "
 
+CHIPS_swift = " \
+            bus@1e78a000/i2c-bus@100/max31785@52_air \
+            bus@1e78a000/i2c-bus@100/max31785@52_water \
+            "
+
 ITEMSFMT = "ahb/apb/{0}.conf"
 ITEMS = "${@compose_list(d, 'ITEMSFMT', 'CHIPS_${MACHINE}')}"
 
