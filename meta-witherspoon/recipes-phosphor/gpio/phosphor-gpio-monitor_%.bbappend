@@ -1,4 +1,5 @@
-FILESEXTRAPATHS_append := "${THISDIR}/${PN}:${THISDIR}/${PN}/${MACHINE}:"
+FILESEXTRAPATHS_append := ":${THISDIR}/${PN}:${THISDIR}/${PN}/${MACHINE}"
+FILESEXTRAPATHS_prepend_witherspoon-common := "${THISDIR}/${PN}/witherspoon:"
 
 TMPL_POWERSUPPLY = "phosphor-gpio-presence@.service"
 INSTFMT_POWERSUPPLY = "phosphor-gpio-presence@{0}.service"

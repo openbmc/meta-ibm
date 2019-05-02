@@ -6,10 +6,7 @@ SRC_URI_append = " \
 	"
 
 # System-specific sensors
-SRC_URI_append_witherspoon = " \
-	file://witherspoon_hwmon_sensors.hardcoded.yaml \
-	"
-SRC_URI_append_witherspoon-128 = " \
+SRC_URI_append_witherspoon-common = " \
 	file://witherspoon_hwmon_sensors.hardcoded.yaml \
 	"
 

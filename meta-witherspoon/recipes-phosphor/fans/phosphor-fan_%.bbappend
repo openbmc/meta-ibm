@@ -1,6 +1,7 @@
 FILESEXTRAPATHS_append := "${THISDIR}/${PN}:"
 # Machine specific files override shared files with the same name
 FILESEXTRAPATHS_prepend := "${THISDIR}/${MACHINE}-${PN}:"
+FILESEXTRAPATHS_prepend_witherspoon-common := "${THISDIR}/witherspoon-${PN}:"
 
 # Package configuration
 FAN_PACKAGES += " \
@@ -27,11 +28,11 @@ FAN_PACKAGES_remove_swift = "${PN}-presence-tach ${PN}-monitor"
 PACKAGECONFIG_remove_swift = "presence monitor"
 
 #These services are protected by the watchdog
-SYSTEMD_OVERRIDE_phosphor-fan-control_witherspoon += "fan-watchdog-monitor.conf:phosphor-fan-control-init@0.service.d/fan-watchdog-monitor.conf"
-SYSTEMD_OVERRIDE_phosphor-fan-control_witherspoon += "fan-watchdog-monitor.conf:phosphor-fan-control@0.service.d/fan-watchdog-monitor.conf"
-SYSTEMD_OVERRIDE_phosphor-fan-monitor_witherspoon += "fan-watchdog-monitor.conf:phosphor-fan-monitor-init@0.service.d/fan-watchdog-monitor.conf"
-SYSTEMD_OVERRIDE_phosphor-fan-monitor_witherspoon += "fan-watchdog-monitor.conf:phosphor-fan-monitor@0.service.d/fan-watchdog-monitor.conf"
+SYSTEMD_OVERRIDE_phosphor-fan-control_witherspoon-common += "fan-watchdog-monitor.conf:phosphor-fan-control-init@0.service.d/fan-watchdog-monitor.conf"
+SYSTEMD_OVERRIDE_phosphor-fan-control_witherspoon-common += "fan-watchdog-monitor.conf:phosphor-fan-control@0.service.d/fan-watchdog-monitor.conf"
+SYSTEMD_OVERRIDE_phosphor-fan-monitor_witherspoon-common += "fan-watchdog-monitor.conf:phosphor-fan-monitor-init@0.service.d/fan-watchdog-monitor.conf"
+SYSTEMD_OVERRIDE_phosphor-fan-monitor_witherspoon-common += "fan-watchdog-monitor.conf:phosphor-fan-monitor@0.service.d/fan-watchdog-monitor.conf"
 
 #These services need to be stopped when watchdog expires
-SYSTEMD_OVERRIDE_phosphor-fan-control_witherspoon += "fan-watchdog-conflicts.conf:phosphor-fan-control@0.service.d/fan-watchdog-conflicts.conf"
-SYSTEMD_OVERRIDE_phosphor-fan-monitor_witherspoon += "fan-watchdog-conflicts.conf:phosphor-fan-monitor@0.service.d/fan-watchdog-conflicts.conf"
+SYSTEMD_OVERRIDE_phosphor-fan-control_witherspoon-common += "fan-watchdog-conflicts.conf:phosphor-fan-control@0.service.d/fan-watchdog-conflicts.conf"
+SYSTEMD_OVERRIDE_phosphor-fan-monitor_witherspoon-common += "fan-watchdog-conflicts.conf:phosphor-fan-monitor@0.service.d/fan-watchdog-conflicts.conf"

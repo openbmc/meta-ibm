@@ -1,6 +1,7 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 # Machine specific files override shared files with the same name
 FILESEXTRAPATHS_prepend := "${THISDIR}/${MACHINE}-${PN}:"
+FILESEXTRAPATHS_prepend_witherspoon-common := "${THISDIR}/witherspoon-${PN}:"
 
 SRC_URI += " \
            file://70-hwmon.rules \
@@ -12,7 +13,7 @@ CHIPS = " \
         bus@1e78a000/i2c-bus@100/max31785@52_air \
         bus@1e78a000/i2c-bus@100/max31785@52_water \
         "
-CHIPS_append_witherspoon = " \
+CHIPS_append_witherspoon-common = " \
                bus@1e78a000/i2c-bus@100/bmp280@77 \
                bus@1e78a000/i2c-bus@100/dps310@76 \
                bus@1e78a000/i2c-bus@100/power-supply@68 \
@@ -31,16 +32,16 @@ CHIPS_append_swift = " \
 ITEMSFMT = "ahb/apb/{0}.conf"
 ITEMS = "${@compose_list(d, 'ITEMSFMT', 'CHIPS')}"
 
-OCCS_witherspoon = " \
+OCCS_witherspoon-common = " \
               00--00--00--06/sbefifo1-dev0/occ-hwmon.1 \
               00--00--00--0a/fsi1/slave@01--00/01--01--00--06/sbefifo2-dev0/occ-hwmon.2 \
               "
-OCCSFMT_witherspoon = "devices/platform/gpio-fsi/fsi0/slave@00--00/{0}.conf"
-OCCITEMS_witherspoon = "${@compose_list(d, 'OCCSFMT_witherspoon', 'OCCS_witherspoon')}"
+OCCSFMT_witherspoon-common = "devices/platform/gpio-fsi/fsi0/slave@00--00/{0}.conf"
+OCCITEMS_witherspoon-common = "${@compose_list(d, 'OCCSFMT_witherspoon', 'OCCS_witherspoon')}"
 
 ENVS = "obmc/hwmon/{0}"
 SYSTEMD_ENVIRONMENT_FILE_${PN} += "${@compose_list(d, 'ENVS', 'ITEMS')}"
-SYSTEMD_ENVIRONMENT_FILE_${PN}_append_witherspoon = " ${@compose_list(d, 'ENVS', 'OCCITEMS_witherspoon')}"
+SYSTEMD_ENVIRONMENT_FILE_${PN}_append_witherspoon-common = " ${@compose_list(d, 'ENVS', 'OCCITEMS_witherspoon')}"
 
 SYSTEMD_ENVIRONMENT_FILE_max31785-msl += "obmc/hwmon-max31785/max31785.conf"
 SYSTEMD_LINK_max31785-msl += "../phosphor-max31785-msl@.service:multi-user.target.wants/phosphor-max31785-msl@${MACHINE}.service"
