@@ -1,4 +1,4 @@
-221:
+19:
     bExp: 0
     entityID: 29
     entityInstance: 1
@@ -19,7 +19,7 @@
     sensorType: 4
     serviceInterface: org.freedesktop.DBus.Properties
     unit: xyz.openbmc_project.Sensor.Value.Unit.RPMS
-223:
+22:
     bExp: 0
     entityID: 29
     entityInstance: 3
@@ -40,7 +40,7 @@
     sensorType: 4
     serviceInterface: org.freedesktop.DBus.Properties
     unit: xyz.openbmc_project.Sensor.Value.Unit.RPMS
-227:
+25:
     bExp: 0
     entityID: 29
     entityInstance: 5
@@ -61,7 +61,7 @@
     sensorType: 4
     serviceInterface: org.freedesktop.DBus.Properties
     unit: xyz.openbmc_project.Sensor.Value.Unit.RPMS
-229:
+28:
     bExp: 0
     entityID: 29
     entityInstance: 7
@@ -82,7 +82,7 @@
     sensorType: 4
     serviceInterface: org.freedesktop.DBus.Properties
     unit: xyz.openbmc_project.Sensor.Value.Unit.RPMS
-231:
+31:
     bExp: 0
     entityID: 10
     entityInstance: 1
@@ -103,7 +103,7 @@
     sensorType: 8
     serviceInterface: org.freedesktop.DBus.Properties
     unit: xyz.openbmc_project.Sensor.Value.Unit.Watts
-238:
+34:
     bExp: 0
     entityID: 10
     entityInstance: 9
@@ -124,7 +124,7 @@
     sensorType: 8
     serviceInterface: org.freedesktop.DBus.Properties
     unit: xyz.openbmc_project.Sensor.Value.Unit.Watts
-239:
+37:
     bExp: 0
     entityID: 10
     entityInstance: 10
@@ -145,7 +145,7 @@
     sensorType: 8
     serviceInterface: org.freedesktop.DBus.Properties
     unit: xyz.openbmc_project.Sensor.Value.Unit.Watts
-240:
+40:
     bExp: 0
     entityID: 10
     entityInstance: 11
@@ -166,7 +166,7 @@
     sensorType: 8
     serviceInterface: org.freedesktop.DBus.Properties
     unit: xyz.openbmc_project.Sensor.Value.Unit.Watts
-241:
+43:
     bExp: 0
     entityID: 10
     entityInstance: 12
@@ -187,7 +187,7 @@
     sensorType: 8
     serviceInterface: org.freedesktop.DBus.Properties
     unit: xyz.openbmc_project.Sensor.Value.Unit.Watts
-242:
+46:
     bExp: 0
     entityID: 10
     entityInstance: 13
@@ -208,7 +208,7 @@
     sensorType: 8
     serviceInterface: org.freedesktop.DBus.Properties
     unit: xyz.openbmc_project.Sensor.Value.Unit.Watts
-243:
+49:
     bExp: 0
     entityID: 10
     entityInstance: 14
@@ -229,7 +229,7 @@
     sensorType: 8
     serviceInterface: org.freedesktop.DBus.Properties
     unit: xyz.openbmc_project.Sensor.Value.Unit.Watts
-244:
+52:
     bExp: 0
     entityID: 10
     entityInstance: 15
@@ -250,7 +250,7 @@
     sensorType: 8
     serviceInterface: org.freedesktop.DBus.Properties
     unit: xyz.openbmc_project.Sensor.Value.Unit.Watts
-245:
+55:
     bExp: 0
     entityID: 10
     entityInstance: 16
@@ -271,7 +271,7 @@
     sensorType: 8
     serviceInterface: org.freedesktop.DBus.Properties
     unit: xyz.openbmc_project.Sensor.Value.Unit.Watts
-246:
+58:
     bExp: 0
     entityID: 10
     entityInstance: 17
@@ -292,7 +292,7 @@
     sensorType: 8
     serviceInterface: org.freedesktop.DBus.Properties
     unit: xyz.openbmc_project.Sensor.Value.Unit.Watts
-247:
+61:
     bExp: 0
     entityID: 10
     entityInstance: 19
@@ -313,7 +313,7 @@
     sensorType: 2
     serviceInterface: org.freedesktop.DBus.Properties
     unit: xyz.openbmc_project.Sensor.Value.Unit.Volts
-248:
+64:
     bExp: 0
     entityID: 10
     entityInstance: 20
@@ -334,7 +334,7 @@
     sensorType: 2
     serviceInterface: org.freedesktop.DBus.Properties
     unit: xyz.openbmc_project.Sensor.Value.Unit.Volts
-249:
+67:
     bExp: 0
     entityID: 10
     entityInstance: 21
@@ -355,7 +355,7 @@
     sensorType: 2
     serviceInterface: org.freedesktop.DBus.Properties
     unit: xyz.openbmc_project.Sensor.Value.Unit.Volts
-250:
+70:
     bExp: 0
     entityID: 10
     entityInstance: 22
@@ -376,7 +376,7 @@
     sensorType: 2
     serviceInterface: org.freedesktop.DBus.Properties
     unit: xyz.openbmc_project.Sensor.Value.Unit.Volts
-251:
+73:
     bExp: 0
     entityID: 10
     entityInstance: 23
@@ -397,7 +397,7 @@
     sensorType: 3
     serviceInterface: org.freedesktop.DBus.Properties
     unit: xyz.openbmc_project.Sensor.Value.Unit.Amperes
-252:
+76:
     bExp: 0
     entityID: 10
     entityInstance: 24
@@ -418,7 +418,7 @@
     sensorType: 3
     serviceInterface: org.freedesktop.DBus.Properties
     unit: xyz.openbmc_project.Sensor.Value.Unit.Amperes
-253:
+79:
     bExp: 0
     entityID: 35
     entityInstance: 1
@@ -430,7 +430,7 @@
                         type: int64_t
     multiplierM: 30
     offsetB: 0
-    path: /xyz/openbmc_project/sensors/temperature/pcie
+    path: /xyz/openbmc_project/sensors/temperature/pcie0_1
     rExp: -2
     readingType: readingData
     scale: -3
@@ -439,7 +439,27 @@
     sensorType: 1
     serviceInterface: org.freedesktop.DBus.Properties
     unit: xyz.openbmc_project.Sensor.Value.Unit.DegreesC
-254:
+82:
+    bExp: 0
+    entityID: 35
+    entityInstance: 2
+    interfaces:
+        xyz.openbmc_project.Sensor.Value:
+            Value:
+                Offsets:
+                    255: null
+    multiplierM: 30
+    offsetB: 0
+    path: /xyz/openbmc_project/sensors/temperature/pcie2_3
+    rExp: -2
+    readingType: readingData
+    scale: -3
+    sensorNamePattern: nameLeaf
+    sensorReadingType: 1
+    sensorType: 1
+    serviceInterface: org.freedesktop.DBus.Properties
+    unit: xyz.openbmc_project.Sensor.Value.Unit.DegreesC
+85:
     bExp: 0
     entityID: 64
     entityInstance: 1
@@ -451,7 +471,7 @@
                         type: int64_t
     multiplierM: 20
     offsetB: 0
-    path: /xyz/openbmc_project/sensors/temperature/ambient
+    path: /xyz/openbmc_project/sensors/temperature/ambient0
     rExp: -2
     readingType: readingData
     scale: -3
@@ -460,3 +480,4 @@
     sensorType: 1
     serviceInterface: org.freedesktop.DBus.Properties
     unit: xyz.openbmc_project.Sensor.Value.Unit.DegreesC
+
