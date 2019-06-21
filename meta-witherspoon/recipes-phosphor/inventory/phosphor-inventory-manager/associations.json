@@ -258,8 +258,7 @@
                     "/xyz/openbmc_project/sensors/current/p1_vdn_current",
 
                     "/xyz/openbmc_project/sensors/power/fan_disk_power",
-                    "/xyz/openbmc_project/sensors/power/io_power",
-                    "/xyz/openbmc_project/sensors/power/total_power",
+                    "/xyz/openbmc_project/sensors/power/io_power", 
                     "/xyz/openbmc_project/sensors/power/p0_io_power",
                     "/xyz/openbmc_project/sensors/power/p0_mem_power",
                     "/xyz/openbmc_project/sensors/power/p0_power",
@@ -1597,7 +1596,9 @@
                     "/xyz/openbmc_project/sensors/current/p1_vcs_current",
                     "/xyz/openbmc_project/sensors/current/p1_vddr_current",
                     "/xyz/openbmc_project/sensors/current/p1_vdd_current",
-                    "/xyz/openbmc_project/sensors/current/p1_vdn_current"
+                    "/xyz/openbmc_project/sensors/current/p1_vdn_current",
+
+                    "/xyz/openbmc_project/sensors/power/total_power",
                 ]
             }
         ]
