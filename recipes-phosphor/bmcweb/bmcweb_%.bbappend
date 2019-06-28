@@ -1,0 +1,3 @@
+_OECMAKE_append_df-openpower = " \
+    -DBMCWEB_INSECURE_ENABLE_REDFISH_FW_TFTP_UPDATE=ON \
+"
