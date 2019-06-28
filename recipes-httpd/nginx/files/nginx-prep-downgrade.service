@@ -1,0 +1,12 @@
+[Unit]
+Description=Prepare file system for downgrade to nginx
+After=network.target
+
+[Service]
+Restart=no
+Type=oneshot
+SyslogIdentifier=nginx-prep-downgrade
+ExecStart=/bin/mkdir -p /etc/ssl/certs/nginx
+
+[Install]
+WantedBy={SYSTEMD_DEFAULT_TARGET}
