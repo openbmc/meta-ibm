@@ -1,3 +1,5 @@
+#MACHINE ?= "witherspoon-128"
+#MACHINE ?= "swift"
 MACHINE ??= "witherspoon"
 DISTRO ?= "openbmc-witherspoon"
 PACKAGE_CLASSES ?= "package_rpm"
