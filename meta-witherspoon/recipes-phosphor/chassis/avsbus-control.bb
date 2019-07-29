@@ -12,11 +12,15 @@ S = "${WORKDIR}"
 
 SRC_URI += "file://avsbus-disable.sh \
             file://avsbus-enable.sh"
+SRC_URI_${PN}_remove_swift = "file://avsbus-disable.sh"
 
 do_install() {
         install -d ${D}${bindir}
-        install -m 0755 ${S}/avsbus-disable.sh ${D}${bindir}/avsbus-disable.sh
         install -m 0755 ${S}/avsbus-enable.sh ${D}${bindir}/avsbus-enable.sh
+
+        if [ "${MACHINE}" != "swift" ]; then            
+            install -m 0755 ${S}/avsbus-disable.sh ${D}${bindir}/avsbus-disable.sh
+        fi
 }
 
 TMPL_EN= "avsbus-enable@.service"
@@ -31,3 +35,6 @@ SYSTEMD_SERVICE_${PN} += "${TMPL_EN}"
 SYSTEMD_LINK_${PN} += "${@compose_list(d, 'FMT_EN', 'OBMC_CHASSIS_INSTANCES')}"
 SYSTEMD_SERVICE_${PN} += "${TMPL_DIS}"
 SYSTEMD_LINK_${PN} += "${@compose_list(d, 'FMT_DIS', 'OBMC_CHASSIS_INSTANCES')}"
+
+SYSTEMD_SERVICE_${PN}_remove_swift = "${TMPL_DIS}"
+SYSTEMD_LINK_${PN}_remove_swift = "${@compose_list(d, 'FMT_DIS', 'OBMC_CHASSIS_INSTANCES')}"
