@@ -8,7 +8,8 @@ inherit phosphor-dbus-monitor
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${BPN}:"
 
-SRC_URI += "file://thermal-policy.yaml"
+SRC_URI_append_ibm-ac-server = "file://thermal-policy.yaml"
+SRC_URI_append_mihawk = "file://thermal-policy.yaml"
 
 do_install() {
         install -D ${WORKDIR}/thermal-policy.yaml ${D}${config_dir}/thermal-policy.yaml
