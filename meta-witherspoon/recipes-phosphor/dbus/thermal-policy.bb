@@ -6,9 +6,7 @@ LIC_FILES_CHKSUM = "file://${IBMBASE}/COPYING.apache-2.0;md5=34400b68072d710fecd
 inherit allarch
 inherit phosphor-dbus-monitor
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/${BPN}:"
-
-SRC_URI += "file://thermal-policy.yaml"
+SRC_URI = "file://thermal-policy.yaml"
 
 do_install() {
         install -D ${WORKDIR}/thermal-policy.yaml ${D}${config_dir}/thermal-policy.yaml
