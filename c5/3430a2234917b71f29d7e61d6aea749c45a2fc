@@ -1,0 +1,9 @@
+Code-Review+1: Andrew Geissler <geissonator@yahoo.com>
+Ok-To-Test+1: Andrew Geissler <geissonator@yahoo.com>
+Verified+1: Jenkins <openbmc-ci-admin@ozlabs.org>
+Code-Review+2: Brad Bishop <radsquirrel@gmail.com>
+Submitted-by: Brad Bishop <radsquirrel@gmail.com>
+Submitted-at: Wed, 14 Aug 2019 17:06:21 +0000
+Reviewed-on: https://gerrit.openbmc-project.xyz/c/openbmc/meta-ibm/+/23530
+Project: openbmc/meta-ibm
+Branch: refs/heads/master
