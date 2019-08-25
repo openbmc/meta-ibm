@@ -1,0 +1,74 @@
+From 4a2a0c5c2eb3e765d36d838ccdf5adc98c625258 Mon Sep 17 00:00:00 2001
+From: Joel Stanley <joel@jms.id.au>
+Date: Thu, 22 Aug 2019 22:15:04 +0930
+Subject: [PATCH] ARM: dts: aspeed: Add Tacoma machine
+
+This is an AST2600 based BMC card for a Power9 system.
+
+Signed-off-by: Joel Stanley <joel@jms.id.au>
+---
+ arch/arm/boot/dts/Makefile                  |  1 +
+ arch/arm/boot/dts/aspeed-bmc-opp-tacoma.dts | 39 +++++++++++++++++++++
+ 2 files changed, 40 insertions(+)
+ create mode 100644 arch/arm/boot/dts/aspeed-bmc-opp-tacoma.dts
+
+diff --git a/arch/arm/boot/dts/Makefile b/arch/arm/boot/dts/Makefile
+index 1b45e790e1e3..180405378b86 100644
+--- a/arch/arm/boot/dts/Makefile
++++ b/arch/arm/boot/dts/Makefile
+@@ -1280,6 +1280,7 @@ dtb-$(CONFIG_ARCH_ASPEED) += \
+ 	aspeed-bmc-opp-palmetto.dtb \
+ 	aspeed-bmc-opp-romulus.dtb \
+ 	aspeed-bmc-opp-swift.dtb \
++	aspeed-bmc-opp-tacoma.dtb \
+ 	aspeed-bmc-opp-vesnin.dtb \
+ 	aspeed-bmc-opp-witherspoon.dtb \
+ 	aspeed-bmc-opp-zaius.dtb \
+diff --git a/arch/arm/boot/dts/aspeed-bmc-opp-tacoma.dts b/arch/arm/boot/dts/aspeed-bmc-opp-tacoma.dts
+new file mode 100644
+index 000000000000..6df639d1764f
+--- /dev/null
++++ b/arch/arm/boot/dts/aspeed-bmc-opp-tacoma.dts
+@@ -0,0 +1,39 @@
++// SPDX-License-Identifier: GPL-2.0-or-later
++// Copyright 2019 IBM Corp.
++/dts-v1/;
++
++#include "aspeed-g6.dtsi"
++
++/ {
++	model = "Tacoma";
++	compatible = "ibm,tacoma-bmc", "aspeed,ast2600";
++
++	aliases {
++		serial4 = &uart5;
++	};
++
++	chosen {
++		stdout-path = &uart5;
++		bootargs = "console=ttyS4,115200n8";
++	};
++
++	memory@80000000 {
++		device_type = "memory";
++		reg = <0x80000000 0x80000000>;
++	};
++};
++
++&mac2 {
++	status = "okay";
++	pinctrl-names = "default";
++	pinctrl-0 = <&pinctrl_rmii3_default>;
++	use-ncsi;
++};
++
++&emmc {
++	status = "disabled";
++};
++
++&fsim0 {
++	status = "okay";
++};
+-- 
+2.23.0.rc1
+
