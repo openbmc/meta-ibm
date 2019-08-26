@@ -1,0 +1,106 @@
+From 2c49406d138ab457450328a69053cd56d2d680f1 Mon Sep 17 00:00:00 2001
+From: Brad Bishop <bradleyb@fuzziesquirrel.com>
+Date: Mon, 26 Aug 2019 07:03:57 -0400
+Subject: [PATCH 2/2] arm: dts: aspeed: add Rainier system
+
+Rainier is a new Power system with an AST2600.
+---
+ arch/arm/boot/dts/Makefile                   |  3 +-
+ arch/arm/boot/dts/aspeed-bmc-opp-rainier.dts | 74 ++++++++++++++++++++
+ 2 files changed, 76 insertions(+), 1 deletion(-)
+ create mode 100644 arch/arm/boot/dts/aspeed-bmc-opp-rainier.dts
+
+diff --git a/arch/arm/boot/dts/Makefile b/arch/arm/boot/dts/Makefile
+index 180405378b86..9ba7d3ef0198 100644
+--- a/arch/arm/boot/dts/Makefile
++++ b/arch/arm/boot/dts/Makefile
+@@ -1285,4 +1285,5 @@ dtb-$(CONFIG_ARCH_ASPEED) += \
+ 	aspeed-bmc-opp-witherspoon.dtb \
+ 	aspeed-bmc-opp-zaius.dtb \
+ 	aspeed-bmc-portwell-neptune.dtb \
+-	aspeed-bmc-quanta-q71l.dtb
++	aspeed-bmc-quanta-q71l.dtb \
++	aspeed-bmc-opp-rainier.dtb
+diff --git a/arch/arm/boot/dts/aspeed-bmc-opp-rainier.dts b/arch/arm/boot/dts/aspeed-bmc-opp-rainier.dts
+new file mode 100644
+index 000000000000..b5c3c3ddc862
+--- /dev/null
++++ b/arch/arm/boot/dts/aspeed-bmc-opp-rainier.dts
+@@ -0,0 +1,74 @@
++// SPDX-License-Identifier: GPL-2.0-or-later
++// Copyright 2019 IBM Corp.
++/dts-v1/;
++
++#include "aspeed-g6.dtsi"
++
++/ {
++	model = "Rainier";
++	compatible = "ibm,rainier-bmc", "aspeed,ast2600";
++
++	aliases {
++		serial4 = &uart5;
++	};
++
++	chosen {
++		stdout-path = &uart5;
++		bootargs = "console=ttyS4,115200n8";
++	};
++
++	memory@80000000 {
++		device_type = "memory";
++		reg = <0x80000000 0x80000000>;
++	};
++};
++
++&emmc {
++	status = "disabled";
++};
++
++&fsim0 {
++	status = "okay";
++};
++
++&fmc {
++	status = "okay";
++
++	flash@0 {
++		status = "okay";
++		label = "bmc";
++		m25p,fast-read;
++		spi-max-frequency = <50000000>;
++
++		partitions {
++			compatible = "fixed-partitions";
++                        #address-cells = <1>;
++                        #size-cells = <1>;
++
++			u-boot@0 {
++				reg = <0x0 0x60000>;
++				label = "u-boot";
++			};
++
++			u-boot-env@60000 {
++				reg = <0x60000 0x20000>;
++				label = "u-boot-env";
++			};
++
++			kernel@a0000 {
++				reg = <0xa0000 0x440000>;
++				label = "kernel";
++			};
++
++			rofs@5c0000 {
++				reg = <0x5c0000 0x1740000>;
++				label = "rofs";
++			};
++
++			rwfs@1c00000 {
++				reg = <0x1c00000 0x400000>;
++				label = "rwfs";
++			};
++		};
++	};
++};
+-- 
+2.21.0
+
