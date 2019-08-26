@@ -1,0 +1,53 @@
+From 0ce18a8ea597fe2e7e9f6746eedbcd171e00f2a2 Mon Sep 17 00:00:00 2001
+From: Brad Bishop <bradleyb@fuzziesquirrel.com>
+Date: Mon, 26 Aug 2019 06:56:43 -0400
+Subject: [PATCH 1/2] arm: dts: add a g5 flash ip
+
+Signed-off-by: Brad Bishop <bradleyb@fuzziesquirrel.com>
+---
+ arch/arm/boot/dts/aspeed-g6.dtsi | 29 +++++++++++++++++++++++++++++
+ 1 file changed, 29 insertions(+)
+
+diff --git a/arch/arm/boot/dts/aspeed-g6.dtsi b/arch/arm/boot/dts/aspeed-g6.dtsi
+index d0507f797981..feace5bf2e03 100644
+--- a/arch/arm/boot/dts/aspeed-g6.dtsi
++++ b/arch/arm/boot/dts/aspeed-g6.dtsi
+@@ -52,6 +52,35 @@
+ 		device_type = "soc";
+ 		ranges;
+ 
++		fmc: spi@1e620000 {
++			reg = < 0x1e620000 0xc4
++				0x20000000 0x10000000 >;
++			#address-cells = <1>;
++			#size-cells = <0>;
++			compatible = "aspeed,ast2500-fmc";
++			clocks = <&syscon ASPEED_CLK_AHB>;
++			status = "disabled";
++			interrupts = <19>;
++			flash@0 {
++				reg = < 0 >;
++				compatible = "jedec,spi-nor";
++				spi-max-frequency = <50000000>;
++				status = "disabled";
++			};
++			flash@1 {
++				reg = < 1 >;
++				compatible = "jedec,spi-nor";
++				spi-max-frequency = <50000000>;
++				status = "disabled";
++			};
++			flash@2 {
++				reg = < 2 >;
++				compatible = "jedec,spi-nor";
++				spi-max-frequency = <50000000>;
++				status = "disabled";
++			};
++		};
++
+ 		gic: interrupt-controller@40461000 {
+ 			compatible = "arm,cortex-a7-gic";
+ 			interrupts = <GIC_PPI 9 (GIC_CPU_MASK_SIMPLE(2) | IRQ_TYPE_LEVEL_HIGH)>;
+-- 
+2.21.0
+
