@@ -1,0 +1,12 @@
+[Unit]
+Description=Phosphor Fan Control Daemon
+Wants=mapper-wait@-xyz-openbmc_project-inventory.service
+After=mapper-wait@-xyz-openbmc_project-inventory.service
+
+[Service]
+Restart=on-failure
+ExecStart=/usr/bin/env phosphor-fan-control --control
+SyslogIdentifier=phosphor-fan-control
+
+[Install]
+RequiredBy=multi-user.target
