@@ -1,0 +1,55 @@
+From 904ff4a1e73a476c1a18c1632e7fba9e9be683e4 Mon Sep 17 00:00:00 2001
+From: Eddie James <eajames@linux.ibm.com>
+Date: Tue, 1 Oct 2019 09:41:08 -0500
+Subject: [PATCH] ARM: dts: Aspeed: witherspoon: Switch to 128MB flash chips
+
+Also adjust the frequency of these chips.
+
+Signed-off-by: Eddie James <eajames@linux.ibm.com>
+---
+ arch/arm/boot/dts/aspeed-bmc-opp-witherspoon.dts | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/arch/arm/boot/dts/aspeed-bmc-opp-witherspoon.dts b/arch/arm/boot/dts/aspeed-bmc-opp-witherspoon.dts
+index c677b7f..6328c63 100644
+--- a/arch/arm/boot/dts/aspeed-bmc-opp-witherspoon.dts
++++ b/arch/arm/boot/dts/aspeed-bmc-opp-witherspoon.dts
+@@ -200,7 +200,7 @@
+ 		status = "okay";
+ 		label = "bmc";
+ 		m25p,fast-read;
+-		spi-max-frequency = <50000000>;
++		spi-max-frequency = <100000000>;
+ 
+ 		partitions {
+ 			#address-cells = < 1 >;
+@@ -215,7 +215,7 @@
+ 				label = "u-boot-env";
+ 			};
+ 			obmc-ubi@80000 {
+-				reg = < 0x80000 0x1F80000 >;
++				reg = < 0x80000 0x7F80000 >;
+ 				label = "obmc-ubi";
+ 			};
+ 		};
+@@ -225,7 +225,7 @@
+ 		status = "okay";
+ 		label = "alt-bmc";
+ 		m25p,fast-read;
+-		spi-max-frequency = <50000000>;
++		spi-max-frequency = <100000000>;
+ 
+ 		partitions {
+ 			#address-cells = < 1 >;
+@@ -240,7 +240,7 @@
+ 				label = "alt-u-boot-env";
+ 			};
+ 			obmc-ubi@80000 {
+-				reg = < 0x80000 0x1F80000 >;
++				reg = < 0x80000 0x7F80000 >;
+ 				label = "alt-obmc-ubi";
+ 			};
+ 		};
+-- 
+1.8.3.1
+
