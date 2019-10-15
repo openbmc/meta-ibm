@@ -1,0 +1,9 @@
+Code-Review+1: Joel Stanley <joel@jms.id.au>
+Code-Review+2: Brad Bishop <radsquirrel@gmail.com>
+Ok-To-Test+1: Jenkins <openbmc-ci-admin@ozlabs.org>
+Verified+1: Jenkins <openbmc-ci-admin@ozlabs.org>
+Submitted-by: Brad Bishop <radsquirrel@gmail.com>
+Submitted-at: Tue, 15 Oct 2019 11:12:18 +0000
+Reviewed-on: https://gerrit.openbmc-project.xyz/c/openbmc/meta-ibm/+/25782
+Project: openbmc/meta-ibm
+Branch: refs/heads/master
