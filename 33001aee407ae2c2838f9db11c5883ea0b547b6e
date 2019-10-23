@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "2f2933b8_8e0fe87b",
+        "filename": "meta-witherspoon/recipes-phosphor/vpd/openpower-fru-vpd_%.bbappend",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000348
+      },
+      "writtenOn": "2019-10-23T13:08:12Z",
+      "side": 1,
+      "message": "did not want to change the existing main bb file as this comes in only for rainier and as team we decided having the machine specific adds will be done via the bbappend file only and so this is here.",
+      "parentUuid": "2a7066e1_cdf4bb87",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 33
+      },
+      "revId": "33001aee407ae2c2838f9db11c5883ea0b547b6e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "32901bcf_5cb21203",
         "filename": "meta-witherspoon/recipes-phosphor/vpd/openpower-fru-vpd_%.bbappend",
         "patchSetId": 1
@@ -36,6 +60,24 @@
       "writtenOn": "2019-10-22T09:38:59Z",
       "side": 1,
       "message": "This seems a bit odd to to. Maybe this rule file should be installed only on the systems that require it, instead of all OP.",
+      "revId": "33001aee407ae2c2838f9db11c5883ea0b547b6e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "13bc6f64_0c8c89c2",
+        "filename": "meta-witherspoon/recipes-phosphor/vpd/openpower-fru-vpd_%.bbappend",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000348
+      },
+      "writtenOn": "2019-10-23T13:08:12Z",
+      "side": 1,
+      "message": "agree, just that the open power repo is used by many outside our control so did not want to create a ripple , so was decided to do here.",
+      "parentUuid": "32901bcf_5cb21203",
       "revId": "33001aee407ae2c2838f9db11c5883ea0b547b6e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
