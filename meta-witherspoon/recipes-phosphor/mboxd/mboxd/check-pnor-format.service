@@ -8,4 +8,4 @@ Type=oneshot
 RemainAfterExit=yes
 
 [Install]
-RequiredBy=mboxd.service
+WantedBy=mboxd.service
