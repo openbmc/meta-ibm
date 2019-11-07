@@ -1,0 +1,11 @@
+Code-Review+1: B. J. Wyman <bjwyman@gmail.com>
+Ok-To-Test+1: Jenkins <openbmc-ci-admin@ozlabs.org>
+Verified+1: Jenkins <openbmc-ci-admin@ozlabs.org>
+Code-Review+1: Derek Howard <derekh@us.ibm.com>
+Code-Review+1: Shawn McCarney <shawnmm@us.ibm.com>
+Code-Review+2: Brad Bishop <bradleyb@fuzziesquirrel.com>
+Submitted-by: Brad Bishop <bradleyb@fuzziesquirrel.com>
+Submitted-at: Thu, 07 Nov 2019 17:44:33 +0000
+Reviewed-on: https://gerrit.openbmc-project.xyz/c/openbmc/meta-ibm/+/26432
+Project: openbmc/meta-ibm
+Branch: refs/heads/master
