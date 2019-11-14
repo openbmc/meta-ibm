@@ -15,7 +15,6 @@ BBLAYERS ?= " \
   ##OEROOT##/meta-aspeed \
   ##OEROOT##/meta-openpower \
   ##OEROOT##/meta-ibm \
-  ##OEROOT##/meta-ibm/meta-witherspoon \
   "
 BBLAYERS_NON_REMOVABLE ?= " \
   ##OEROOT##/meta \
@@ -27,5 +26,4 @@ BBLAYERS_NON_REMOVABLE ?= " \
   ##OEROOT##/meta-aspeed \
   ##OEROOT##/meta-openpower \
   ##OEROOT##/meta-ibm \
-  ##OEROOT##/meta-ibm/meta-witherspoon \
   "
