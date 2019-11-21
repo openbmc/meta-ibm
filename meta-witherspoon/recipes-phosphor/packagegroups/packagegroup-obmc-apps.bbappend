@@ -14,3 +14,5 @@ RDEPENDS_${PN}-extras_append_witherspoon-128 = " pldm"
 RDEPENDS_${PN}-extras_append_witherspoon-tacoma = " pldm"
 
 ${PN}-software-extras_append_ibm-ac-server = " phosphor-software-manager-sync"
+
+RDEPENDS_${PN}-logging += "ibm-logging"
