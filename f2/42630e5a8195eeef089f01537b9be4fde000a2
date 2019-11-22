@@ -1,0 +1,10 @@
+Code-Review+1: Lei YU <mine260309@gmail.com>
+Code-Review+1: Alvin Wang <alvinwang@msn.com>
+Ok-To-Test+1: Brad Bishop <bradleyb@fuzziesquirrel.com>
+Code-Review+2: Brad Bishop <bradleyb@fuzziesquirrel.com>
+Verified+1: Jenkins <openbmc-ci-admin@ozlabs.org>
+Submitted-by: Brad Bishop <bradleyb@fuzziesquirrel.com>
+Submitted-at: Fri, 22 Nov 2019 00:56:04 +0000
+Reviewed-on: https://gerrit.openbmc-project.xyz/c/openbmc/meta-ibm/+/27294
+Project: openbmc/meta-ibm
+Branch: refs/heads/master
