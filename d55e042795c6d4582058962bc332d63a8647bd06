@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f8e7d2a7_95a8f853",
+        "filename": "meta-witherspoon/recipes-phosphor/vpd/ibm-vpd-parser/70-ibm-vpd-parser.rules",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2019-12-09T19:48:07Z",
+      "side": 1,
+      "message": "can we please add this to openpower-vpd-parser and have it installed via make install?",
+      "revId": "d55e042795c6d4582058962bc332d63a8647bd06",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f9862a60_75e3661a",
+        "filename": "meta-witherspoon/recipes-phosphor/vpd/ibm-vpd-parser/ibm-vpd-parser@.service",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2019-12-09T19:48:07Z",
+      "side": 1,
+      "message": "Most projects have stopped hosting their systemd unit files in the metadata and moved them to the project source itself.\n\nTo that end, can we please add this to openpower-vpd-parser and have it installed via make install?",
+      "revId": "d55e042795c6d4582058962bc332d63a8647bd06",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}
