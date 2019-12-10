@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "aa61cc1f_49ea1ef6",
+        "filename": "meta-witherspoon/recipes-phosphor/vpd/ibm-vpd-parser/70-ibm-vpd-parser.rules",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2019-12-10T17:26:31Z",
+      "side": 1,
+      "message": "you can use meson options to configure which template to SYSTEMD_WANT.  You are right - it would be much simpler if we had just a single application and single template that worked in all situations to install.\n\n\u003e my take is that it would be better not to over populate the openpower-vpd-parser recipe.\n\nIts only one line to add a PACKAGECONFIG.",
+      "parentUuid": "18cd52f3_f81cff48",
+      "revId": "d55e042795c6d4582058962bc332d63a8647bd06",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f9862a60_75e3661a",
         "filename": "meta-witherspoon/recipes-phosphor/vpd/ibm-vpd-parser/ibm-vpd-parser@.service",
         "patchSetId": 13
@@ -102,6 +120,24 @@
       "side": 1,
       "message": "would be better not to over populate the open-power repo , initially it was added and it was like a workaround and so was moved out to a recipe. This will be cleaner until we move to entity manager and so we will not have any residue left in the open-power recipe.",
       "parentUuid": "25bf9d3b_d7685861",
+      "revId": "d55e042795c6d4582058962bc332d63a8647bd06",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "be92dbc2_f4c63e5c",
+        "filename": "meta-witherspoon/recipes-phosphor/vpd/ibm-vpd-parser/ibm-vpd-parser@.service",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2019-12-10T17:26:31Z",
+      "side": 1,
+      "message": "\u003e How do we handle cases where the service dependencies and the executables being invoked are system dependent if we add these to the project\u0027s repo?\n\nWhat is an example of a system dependent executable?  Ideally we don\u0027t have those at all?\n\nAs far as system specific unit dependencies I\u0027d like to not have those either.  Is there any reason the dependency could not be added on all systems?  The overall goal is to have as much code as possible act the same from one OpenBMC machine to the next.\n\nIf we absolutely must have a system specific dependenccy, that can be accomplished with systemd overrides on a per system basis.  but if we get into that situation there are probably better alternatives available.",
+      "parentUuid": "0e4c4ff2_71604b45",
       "revId": "d55e042795c6d4582058962bc332d63a8647bd06",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
