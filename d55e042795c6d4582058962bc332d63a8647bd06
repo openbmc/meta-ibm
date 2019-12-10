@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "28284826_08ab7aa8",
+        "filename": "meta-witherspoon/recipes-phosphor/vpd/ibm-vpd-parser/70-ibm-vpd-parser.rules",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000338
+      },
+      "writtenOn": "2019-12-10T02:15:58Z",
+      "side": 1,
+      "message": "That\u0027d make it difficult (impossible?) to install different rules on a per-recipe basis.",
+      "parentUuid": "f8e7d2a7_95a8f853",
+      "revId": "d55e042795c6d4582058962bc332d63a8647bd06",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f9862a60_75e3661a",
         "filename": "meta-witherspoon/recipes-phosphor/vpd/ibm-vpd-parser/ibm-vpd-parser@.service",
         "patchSetId": 13
@@ -30,6 +48,24 @@
       "writtenOn": "2019-12-09T19:48:07Z",
       "side": 1,
       "message": "Most projects have stopped hosting their systemd unit files in the metadata and moved them to the project source itself.\n\nTo that end, can we please add this to openpower-vpd-parser and have it installed via make install?",
+      "revId": "d55e042795c6d4582058962bc332d63a8647bd06",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "25bf9d3b_d7685861",
+        "filename": "meta-witherspoon/recipes-phosphor/vpd/ibm-vpd-parser/ibm-vpd-parser@.service",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000338
+      },
+      "writtenOn": "2019-12-10T02:15:58Z",
+      "side": 1,
+      "message": "How do we handle cases where the service dependencies and the executables being invoked are system dependent if we add these to the project\u0027s repo?",
+      "parentUuid": "f9862a60_75e3661a",
       "revId": "d55e042795c6d4582058962bc332d63a8647bd06",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
