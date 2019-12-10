@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "18cd52f3_f81cff48",
+        "filename": "meta-witherspoon/recipes-phosphor/vpd/ibm-vpd-parser/70-ibm-vpd-parser.rules",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000348
+      },
+      "writtenOn": "2019-12-10T08:27:37Z",
+      "side": 1,
+      "message": "my take is that it would be better not to over populate the openpower-vpd-parser recipe.",
+      "parentUuid": "28284826_08ab7aa8",
+      "revId": "d55e042795c6d4582058962bc332d63a8647bd06",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f9862a60_75e3661a",
         "filename": "meta-witherspoon/recipes-phosphor/vpd/ibm-vpd-parser/ibm-vpd-parser@.service",
         "patchSetId": 13
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "How do we handle cases where the service dependencies and the executables being invoked are system dependent if we add these to the project\u0027s repo?",
       "parentUuid": "f9862a60_75e3661a",
+      "revId": "d55e042795c6d4582058962bc332d63a8647bd06",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0e4c4ff2_71604b45",
+        "filename": "meta-witherspoon/recipes-phosphor/vpd/ibm-vpd-parser/ibm-vpd-parser@.service",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000348
+      },
+      "writtenOn": "2019-12-10T08:27:37Z",
+      "side": 1,
+      "message": "would be better not to over populate the open-power repo , initially it was added and it was like a workaround and so was moved out to a recipe. This will be cleaner until we move to entity manager and so we will not have any residue left in the open-power recipe.",
+      "parentUuid": "25bf9d3b_d7685861",
       "revId": "d55e042795c6d4582058962bc332d63a8647bd06",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
