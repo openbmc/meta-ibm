@@ -1,9 +1,19 @@
+POWER_SERVICE_PACKAGES_ALL = " \
+    phosphor-power-monitor \
+    phosphor-power-systemd-links-monitor \
+    phosphor-power-sequencer \
+    phosphor-power-systemd-links-sequencer \
+    phosphor-power-regulators \
+    phosphor-power-utils \
+    phosphor-power \
+"
+
 RDEPENDS_${PN}-inventory_append_ibm-ac-server = " openpower-fru-vpd openpower-occ-control phosphor-cooling-type virtual/obmc-gpio-presence"
 RDEPENDS_${PN}-inventory_append_rainier = " openpower-fru-vpd openpower-occ-control virtual/obmc-gpio-presence"
 RDEPENDS_${PN}-inventory_append_mihawk = " openpower-fru-vpd openpower-occ-control virtual/obmc-gpio-presence id-button phosphor-cooling-type"
 RDEPENDS_${PN}-fan-control_append_ibm-ac-server = " witherspoon-fan-watchdog"
-RDEPENDS_${PN}-extras_append_ibm-ac-server = " phosphor-power phosphor-power-systemd-links witherspoon-power-supply-sync phosphor-webui"
-RDEPENDS_${PN}-extras_append_rainier = " phosphor-power phosphor-power-systemd-links phosphor-webui"
+RDEPENDS_${PN}-extras_append_ibm-ac-server = " ${POWER_SERVICE_PACKAGES_ALL} witherspoon-power-supply-sync phosphor-webui"
+RDEPENDS_${PN}-extras_append_rainier = " ${POWER_SERVICE_PACKAGES_ALL} phosphor-webui"
 RDEPENDS_${PN}-extras_append_mihawk = " phosphor-webui phosphor-image-signing"
 RDEPENDS_${PN}-extras_remove_rainier = "obmc-ikvm liberation-fonts uart-render-controller"
 RDEPENDS_${PN}-extras_remove_swift = "obmc-ikvm"
