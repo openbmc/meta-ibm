@@ -24,6 +24,23 @@
         "extraInterfaces": {
           "xyz.openbmc_project.Inventory.Item.Board.Motherboard": null
         }
+      },
+      {
+        "inventoryPath": "/system",
+        "inherit": false,
+        "extraInterfaces": {
+          "xyz.openbmc_project.Inventory.Item.System": null,
+          "xyz.openbmc_project.Inventory.Decorator.Asset": {
+            "SerialNumber": {
+              "recordName": "VSYS",
+              "keywordName": "SE"
+            },
+            "Model": {
+              "recordName": "VSYS",
+              "keywordName": "TM"
+            }
+          }
+        }
       }
     ],
     "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a480.i2c-bus/i2c-8/8-0051/8-00510/nvmem": [
