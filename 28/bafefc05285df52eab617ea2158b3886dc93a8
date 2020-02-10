@@ -1,0 +1,11 @@
+Ok-To-Test+1: Jenkins <openbmc-ci-admin@ozlabs.org>
+Code-Review+1: Alvin Wang <alvinwang@msn.com>
+Verified+1: Jenkins <openbmc-ci-admin@ozlabs.org>
+Code-Review+1: Andrew Geissler <geissonator@yahoo.com>
+Code-Review+1: Tom Joseph <tomjoseph@in.ibm.com>
+Code-Review+2: Brad Bishop <bradleyb@fuzziesquirrel.com>
+Submitted-by: Brad Bishop <bradleyb@fuzziesquirrel.com>
+Submitted-at: Mon, 10 Feb 2020 19:27:48 +0000
+Reviewed-on: https://gerrit.openbmc-project.xyz/c/openbmc/meta-ibm/+/29064
+Project: openbmc/meta-ibm
+Branch: refs/heads/master
