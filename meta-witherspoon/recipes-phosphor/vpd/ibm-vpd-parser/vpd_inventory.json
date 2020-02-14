@@ -8,13 +8,19 @@
       "SerialNumber": {
         "recordName": "VINI",
         "keywordName": "SN"
+      },
+      "BuildDate": {
+        "recordName": "VR10",
+        "keywordName": "DC",
+        "encoding": "DATE"
       }
     },
     "xyz.openbmc_project.Inventory.Item": {
       "PrettyName": {
         "recordName": "VINI",
         "keywordName": "DR"
-      }
+      },
+      "Present": true
     }
   },
   "frus": {
