@@ -8,7 +8,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=86d3f3a95c324c9479bd8986968f4327"
 S = "${WORKDIR}/git"
 
 inherit autotools pkgconfig
-inherit pythonnative
+inherit python3native
 inherit phosphor-dbus-yaml
 
 DEPENDS += "autoconf-archive-native"
