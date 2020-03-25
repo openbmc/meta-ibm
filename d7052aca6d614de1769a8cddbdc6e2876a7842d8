@@ -16,6 +16,24 @@
       "revId": "d7052aca6d614de1769a8cddbdc6e2876a7842d8",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d445683e_87a981cd",
+        "filename": "meta-witherspoon/recipes-phosphor/network/phosphor-network_%.bbappend",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000013
+      },
+      "writtenOn": "2020-03-25T22:12:39Z",
+      "side": 1,
+      "message": "Hrm, let me double check that it\u0027s doing what we expect.\n\nI guess it\u0027s going to be added to the sources list for all ac-server machines, but only witherespoon will do something with it?",
+      "parentUuid": "ac4ab0ef_3a322c4b",
+      "revId": "d7052aca6d614de1769a8cddbdc6e2876a7842d8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }
