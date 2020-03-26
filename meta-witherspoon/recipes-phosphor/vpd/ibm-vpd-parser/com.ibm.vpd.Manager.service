@@ -1,0 +1,5 @@
+[D-BUS Service]
+Name=com.ibm.vpd.Manager
+Exec=/bin/false
+User=root
+SystemdService=dbus-com.ibm.vpd.Manager.service
