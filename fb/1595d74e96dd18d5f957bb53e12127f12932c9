@@ -1,0 +1,11 @@
+Ok-To-Test+1: Jenkins <openbmc-ci-admin@ozlabs.org>
+Code-Review+1: MARRI DEVENDER RAO <devenrao@in.ibm.com>
+Ok-To-Test+1: Matt Spinler <spinler@us.ibm.com>
+Verified+1: Jenkins <openbmc-ci-admin@ozlabs.org>
+Code-Review+1: Andrew Geissler <geissonator@yahoo.com>
+Code-Review+2: Brad Bishop <bradleyb@fuzziesquirrel.com>
+Submitted-by: Brad Bishop <bradleyb@fuzziesquirrel.com>
+Submitted-at: Thu, 26 Mar 2020 17:23:12 +0000
+Reviewed-on: https://gerrit.openbmc-project.xyz/c/openbmc/meta-ibm/+/30640
+Project: openbmc/meta-ibm
+Branch: refs/heads/master
