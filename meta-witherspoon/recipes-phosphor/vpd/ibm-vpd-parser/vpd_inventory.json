@@ -124,6 +124,18 @@
           "xyz.openbmc_project.Inventory.Item.Vrm": null
         }
       }
+    ],
+    "/sys/bus/spi/devices/spi2.0/spi2.00/nvmem": [
+      {
+          "inventoryPath": "/system/chassis/motherboard/cpu0",
+          "offset": "196608",
+          "extraInterfaces": {
+              "xyz.openbmc_project.Inventory.Item.cpu": null,
+              "com.ibm.ipzvpd.Location" : {
+                  "LocationCode" : "Ufcs-P0-C15"
+              }
+          }
+      }
     ]
   }
 }
