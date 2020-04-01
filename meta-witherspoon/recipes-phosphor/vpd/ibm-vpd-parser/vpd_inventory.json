@@ -167,6 +167,30 @@
           }
         }
       }
+    ],
+    "/sys/bus/spi/devices/spi2.0/spi2.00/nvmem": [
+      {
+          "inventoryPath": "/system/chassis/motherboard/cpu0",
+          "offset": "0x30000",
+          "extraInterfaces": {
+              "xyz.openbmc_project.Inventory.Item.cpu": null,
+              "com.ibm.ipzvpd.Location" : {
+                  "LocationCode" : "Ufcs-P0-C15"
+              }
+          }
+      }
+    ],
+    "/sys/bus/spi/devices/spi3.0/spi3.00/nvmem": [
+      {
+          "inventoryPath": "/system/chassis/motherboard/cpu1",
+          "offset": "0x30000",
+          "extraInterfaces": {
+              "xyz.openbmc_project.Inventory.Item.cpu": null,
+              "com.ibm.ipzvpd.Location" : {
+                  "LocationCode" : "Ufcs-P0-C15"
+              }
+          }
+      }
     ]
   }
 }
