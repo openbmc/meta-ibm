@@ -129,8 +129,20 @@
       {
           "inventoryPath": "/system/chassis/motherboard/cpu0",
           "offset": 196608,
+          "type": "fruAndModule",
           "extraInterfaces": {
-              "xyz.openbmc_project.Inventory.Item.cpu": null,
+              "xyz.openbmc_project.Inventory.Item.Cpu": null,
+              "com.ibm.ipzvpd.Location" : {
+                  "LocationCode" : "Ufcs-P0-C15"
+              }
+          }
+      },
+      {
+          "inventoryPath": "/system/chassis/motherboard/cpu1",
+          "inheritEI": false,
+          "type": "moduleOnly",
+          "extraInterfaces": {
+              "xyz.openbmc_project.Inventory.Item.Cpu": null,
               "com.ibm.ipzvpd.Location" : {
                   "LocationCode" : "Ufcs-P0-C15"
               }
@@ -141,13 +153,16 @@
       {
           "inventoryPath": "/system/chassis/motherboard/cpu1",
           "offset": 196608,
+          "inherit": false,
+          "type": "moduleOnly",
           "extraInterfaces": {
-              "xyz.openbmc_project.Inventory.Item.cpu": null,
+              "xyz.openbmc_project.Inventory.Item.Cpu": null,
               "com.ibm.ipzvpd.Location" : {
                   "LocationCode" : "Ufcs-P0-C15"
               }
           }
       }
     ]
+  
   }
 }
