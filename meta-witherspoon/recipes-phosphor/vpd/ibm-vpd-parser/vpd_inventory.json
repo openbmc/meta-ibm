@@ -125,29 +125,61 @@
         }
       }
     ],
-    "/sys/devices/platform/ahb/ahb:apb/1e79b000.fsi/fsi-master/fsi0/slave@00:00/00:00:00:04/spi_master/spi2/spi2.0/spi2.00/nvmem": [
-      {
-          "inventoryPath": "/system/chassis/motherboard/cpu0",
-          "offset": 196608,
-          "extraInterfaces": {
-              "xyz.openbmc_project.Inventory.Item.cpu": null,
-              "com.ibm.ipzvpd.Location" : {
-                  "LocationCode" : "Ufcs-P0-C15"
-              }
-          }
-      }
-    ],
-    "/sys/devices/platform/ahb/ahb:apb/1e79b000.fsi/fsi-master/fsi0/slave@00:00/00:00:00:0a/fsi-master/fsi1/slave@03:00/01:03:00:04/spi_master/spi6/spi6.0/spi6.00/nvmem": [
-      {
-          "inventoryPath": "/system/chassis/motherboard/cpu1",
-          "offset": 196608,
-          "extraInterfaces": {
-              "xyz.openbmc_project.Inventory.Item.cpu": null,
-              "com.ibm.ipzvpd.Location" : {
-                  "LocationCode" : "Ufcs-P0-C15"
-              }
-          }
-      }
-    ]
+  },
+  "modules": {
+      "DCM0": {
+        "/sys/devices/platform/ahb/ahb:apb/1e79b000.fsi/fsi-master/fsi0/slave@00:00/00:00:00:04/spi_master/spi2/spi2.0/spi2.00/nvmem": [
+        {
+            "inventoryPath": "/system/chassis/motherboard/cpu0",
+            "offset": 196608,
+            "moduleVpd": true,
+            "extraInterfaces": {
+                "xyz.openbmc_project.Inventory.Item.cpu": null,
+                "com.ibm.ipzvpd.Location" : {
+                    "LocationCode" : "Ufcs-P0-C15"
+                }
+            }
+        }
+      ],
+      "/sys/devices/platform/ahb/ahb:apb/1e79b000.fsi/fsi-master/fsi0/slave@00:00/00:00:00:0a/fsi-master/fsi1/slave@03:00/01:03:00:04/spi_master/spi6/spi6.0/spi6.00/nvmem": [
+        {
+            "inventoryPath": "/system/chassis/motherboard/cpu1",
+            "offset": 196608,
+            "extraInterfaces": {
+                "xyz.openbmc_project.Inventory.Item.cpu": null,
+                "com.ibm.ipzvpd.Location" : {
+                    "LocationCode" : "Ufcs-P0-C15"
+                }
+            }
+        }
+      ]
+    },
+    "DCM1": {
+      "/sys/devices/platform/ahb/ahb:apb/1e79b000.fsi/fsi-master/fsi0/slave@00:00/00:00:00:04/spi_master/spi2/spi2.0/spi2.00/nvmem": [
+        {
+            "inventoryPath": "/system/chassis/motherboard/cpu0",
+            "offset": 196608,
+            "moduleVpd": true,
+            "extraInterfaces": {
+                "xyz.openbmc_project.Inventory.Item.cpu": null,
+                "com.ibm.ipzvpd.Location" : {
+                    "LocationCode" : "Ufcs-P0-C15"
+                }
+            }
+        }
+      ],
+      "/sys/devices/platform/ahb/ahb:apb/1e79b000.fsi/fsi-master/fsi0/slave@00:00/00:00:00:0a/fsi-master/fsi1/slave@03:00/01:03:00:04/spi_master/spi6/spi6.0/spi6.00/nvmem": [
+        {
+            "inventoryPath": "/system/chassis/motherboard/cpu1",
+            "offset": 196608,
+            "extraInterfaces": {
+                "xyz.openbmc_project.Inventory.Item.cpu": null,
+                "com.ibm.ipzvpd.Location" : {
+                    "LocationCode" : "Ufcs-P0-C15"
+                }
+            }
+        }
+      ]
+    }
   }
 }
