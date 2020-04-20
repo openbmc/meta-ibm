@@ -66,6 +66,28 @@
               "LocationCode" : "Ufcs"
           }
         }
+      },
+      {
+	"inventoryPath": "/system/chassis/motherboard/tod-battery",
+	"inherit": false,
+	"isSystemVpd": true,
+	"extraInterfaces": {
+	  "xyz.openbmc_project.Inventory.Item.Board.Motherboard": null,
+	  "com.ibm.ipzvpd.Location" : {
+              "LocationCode" : "Ufcs-P0-E0"
+          }
+	}
+      },
+      {
+        "inventoryPath": "/system/chassis/motherboard/front_usb",
+        "inherit": false,
+        "isSystemVpd": true,
+        "extraInterfaces": {
+	  "xyz.openbmc_project.Inventory.Item.Board.IOBoard": null,
+          "com.ibm.ipzvpd.Location" : {
+              "LocationCode" : "Ufcs-P0-T8"
+          }
+        }
       }
     ],
     "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a480.i2c-bus/i2c-8/8-0051/8-00510/nvmem": [
@@ -109,6 +131,36 @@
               "keywordName": "Z1",
               "encoding": "MAC"
             }
+          }
+        }
+      },
+      {
+	"inventoryPath": "/system/chassis/motherboard/ebmc_card_bmc/host-usb3-1port-0",
+        "inherit": false,	
+        "extraInterfaces": {
+          "xyz.openbmc_project.Inventory.Item.Connector": null,
+          "com.ibm.ipzvpd.Location" : {
+              "LocationCode" : "Ufcs-P0-C5-T2"
+          }
+	}
+      },
+      {
+        "inventoryPath": "/system/chassis/motherboard/ebmc_card_bmc/displayport-0",
+        "inherit": false,
+        "extraInterfaces": {
+          "xyz.openbmc_project.Inventory.Item.Connector": null,
+          "com.ibm.ipzvpd.Location" : {
+              "LocationCode" : "Ufcs-P0-C5-T3"
+          }
+        }
+      },
+      {
+        "inventoryPath": "/system/chassis/motherboard/ebmc_card_bmc/bmc-usb2-1port-0",
+        "inherit": false,
+        "extraInterfaces": {
+          "xyz.openbmc_project.Inventory.Item.Connector": null,
+          "com.ibm.ipzvpd.Location" : {
+              "LocationCode" : "Ufcs-P0-C5-T4"
           }
         }
       }
@@ -164,6 +216,146 @@
           "xyz.openbmc_project.Inventory.Item.Vrm": null,
           "com.ibm.ipzvpd.Location" : {
               "LocationCode" : "Ufcs-P0-C23"
+          }
+        }
+      }
+    ],
+    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a280.i2c-bus/i2c-4/4-0050/4-00500/nvmem": [
+      {
+        "inventoryPath": "/system/chassis/motherboard/pcieslot-x160/pcie-cable-card",
+        "extraInterfaces": {
+          "xyz.openbmc_project.Inventory.Item.PCIeDevice": null,
+          "com.ibm.ipzvpd.Location" : {
+              "LocationCode" : "Ufcs-P0-C0"
+          }
+        }
+      }
+    ],
+    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a300.i2c-bus/i2c-5/5-0050/5-00500/nvmem": [
+      {
+        "inventoryPath": "/system/chassis/motherboard/pcieslot-x161/pcie-cable-card",
+        "extraInterfaces": {
+          "xyz.openbmc_project.Inventory.Item.PCIeDevice": null,
+          "com.ibm.ipzvpd.Location" : {
+              "LocationCode" : "Ufcs-P0-C3"
+          }
+        }
+      }
+    ],
+    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a300.i2c-bus/i2c-5/5-0051/5-00510/nvmem": [
+      {
+        "inventoryPath": "/system/chassis/motherboard/pcieslot-x162/pcie-cable-card",
+        "extraInterfaces": {
+          "xyz.openbmc_project.Inventory.Item.PCIeDevice": null,
+          "com.ibm.ipzvpd.Location" : {
+              "LocationCode" : "Ufcs-P0-C4"
+          }
+        }
+      }
+    ],
+    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a600.i2c-bus/i2c-11/11-0050/5-00500/nvmem": [
+      {
+        "inventoryPath": "/system/chassis/motherboard/pcieslot-x163/pcie-cable-card",
+        "extraInterfaces": {
+          "xyz.openbmc_project.Inventory.Item.PCIeDevice": null,
+          "com.ibm.ipzvpd.Location" : {
+              "LocationCode" : "Ufcs-P0-C10"
+          }
+        }
+      }
+    ],
+    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a280.i2c-bus/i2c-4/4-0052/4-00520/nvmem": [
+      {
+        "inventoryPath": "/system/chassis/motherboard/pcieslot-x84/pcie-cable-card",
+        "extraInterfaces": {
+          "xyz.openbmc_project.Inventory.Item.PCIeDevice": null,
+          "com.ibm.ipzvpd.Location" : {
+              "LocationCode" : "Ufcs-P0-C2"
+          }
+        }
+      }
+    ],
+    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a380.i2c-bus/i2c-6/6-0052/6-00520/nvmem": [
+      {
+        "inventoryPath": "/system/chassis/motherboard/pcieslot-x85/pcie-cable-card",
+        "extraInterfaces": {
+          "xyz.openbmc_project.Inventory.Item.PCIeDevice": null,
+          "com.ibm.ipzvpd.Location" : {
+              "LocationCode" : "Ufcs-P0-C7"
+          }
+        }
+      }
+    ],
+    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a380.i2c-bus/i2c-6/6-0050/6-00500/nvmem": [
+      {
+        "inventoryPath": "/system/chassis/motherboard/pcieslot-x86/pcie-cable-card",
+        "extraInterfaces": {
+          "xyz.openbmc_project.Inventory.Item.PCIeDevice": null,
+          "com.ibm.ipzvpd.Location" : {
+              "LocationCode" : "Ufcs-P0-C9"
+          }
+        }
+      }
+    ],
+    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a600.i2c-bus/i2c-11/11-0051/11-00510/nvmem": [
+      {
+        "inventoryPath": "/system/chassis/motherboard/pcieslot-x87/pcie-cable-card",
+        "extraInterfaces": {
+          "xyz.openbmc_project.Inventory.Item.PCIeDevice": null,
+          "com.ibm.ipzvpd.Location" : {
+              "LocationCode" : "Ufcs-P0-C11"
+          }
+        }
+      }
+    ],
+    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a280.i2c-bus/i2c-4/4-0051/4-00510/nvmem": [
+      {
+        "inventoryPath": "/system/chassis/motherboard/pcieslot-x88/pcie-cable-card",
+        "extraInterfaces": {
+          "xyz.openbmc_project.Inventory.Item.PCIeDevice": null,
+          "com.ibm.ipzvpd.Location" : {
+              "LocationCode" : "Ufcs-P0-C1"
+          }
+        }
+      }
+    ],
+    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a380.i2c-bus/i2c-6/6-0051/6-00510/nvmem": [
+      {
+        "inventoryPath": "/system/chassis/motherboard/pcieslot-x89/pcie-cable-card",
+        "extraInterfaces": {
+          "xyz.openbmc_project.Inventory.Item.PCIeDevice": null,
+          "com.ibm.ipzvpd.Location" : {
+              "LocationCode" : "Ufcs-P0-C8"
+          }
+        }
+      }
+    ],
+    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a700.i2c-bus/i2c-13/13-0050/13-00500/nvmem": [
+      {
+	"inventoryPath": "/system/chassis/motherboard/dasd-card-pyramid0",
+        "extraInterfaces": {
+          "com.ibm.ipzvpd.Location" : {
+              "LocationCode" : "Ufcs-P0"
+          }
+        }
+      }
+    ],
+    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a780.i2c-bus/i2c-14/14-0050/14-00500/nvmem": [
+      {
+        "inventoryPath": "/system/chassis/motherboard/dasd-card-pyramid1",
+        "extraInterfaces": {
+          "com.ibm.ipzvpd.Location" : {
+              "LocationCode" : "Ufcs-P1"
+          }
+        }
+      }
+    ],
+    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a800.i2c-bus/i2c-15/15-0050/15-00500/nvmem": [
+      {
+        "inventoryPath": "/system/chassis/motherboard/dasd-card-pyramid2",
+        "extraInterfaces": {
+          "com.ibm.ipzvpd.Location" : {
+              "LocationCode" : "Ufcs-P2"
           }
         }
       }
