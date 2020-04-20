@@ -130,7 +130,16 @@
           "inventoryPath": "/system/chassis/motherboard/cpu0",
           "offset": 196608,
           "extraInterfaces": {
-              "xyz.openbmc_project.Inventory.Item.cpu": null,
+              "xyz.openbmc_project.Inventory.Item.CpuCard": null,
+              "com.ibm.ipzvpd.Location" : {
+                  "LocationCode" : "Ufcs-P0-C15"
+              }
+          }
+      },
+      {
+          "inventoryPath": "/system/chassis/motherboard/cpu0/module0",
+          "extraInterfaces": {
+              "xyz.openbmc_project.Inventory.Item.Cpu": null,
               "com.ibm.ipzvpd.Location" : {
                   "LocationCode" : "Ufcs-P0-C15"
               }
@@ -139,12 +148,45 @@
     ],
     "/sys/devices/platform/ahb/ahb:apb/1e79b000.fsi/fsi-master/fsi0/slave@00:00/00:00:00:0a/fsi-master/fsi1/slave@03:00/01:03:00:04/spi_master/spi6/spi6.0/spi6.00/nvmem": [
       {
+          "inventoryPath": "/system/chassis/motherboard/cpu0/module1",
+          "offset": 196608,
+          "extraInterfaces": {
+              "xyz.openbmc_project.Inventory.Item.Cpu": null,
+              "com.ibm.ipzvpd.Location" : {
+                  "LocationCode" : "Ufcs-P0-C15"
+              }
+          }
+      }
+    ],
+    "/sys/devices/platform/ahb/ahb:apb/1e79b000.fsi/fsi-master/fsi0/slave@00:00/00:00:00:04/spi_master/spi2/spi2.0/spi2.00/nvmem": [
+      {
           "inventoryPath": "/system/chassis/motherboard/cpu1",
           "offset": 196608,
           "extraInterfaces": {
-              "xyz.openbmc_project.Inventory.Item.cpu": null,
+              "xyz.openbmc_project.Inventory.Item.CpuCard": null,
               "com.ibm.ipzvpd.Location" : {
-                  "LocationCode" : "Ufcs-P0-C15"
+                  "LocationCode" : "Ufcs-P0-C24"
+              }
+          }
+      },
+      {
+          "inventoryPath": "/system/chassis/motherboard/cpu1/module0",
+          "extraInterfaces": {
+              "xyz.openbmc_project.Inventory.Item.Cpu": null,
+              "com.ibm.ipzvpd.Location" : {
+                  "LocationCode" : "Ufcs-P0-C24"
+              }
+          }
+      }
+    ],
+    "/sys/devices/platform/ahb/ahb:apb/1e79b000.fsi/fsi-master/fsi0/slave@00:00/00:00:00:0a/fsi-master/fsi1/slave@03:00/01:03:00:04/spi_master/spi6/spi6.0/spi6.00/nvmem": [
+      {
+          "inventoryPath": "/system/chassis/motherboard/cpu1/module1",
+          "offset": 196608,
+          "extraInterfaces": {
+              "xyz.openbmc_project.Inventory.Item.Cpu": null,
+              "com.ibm.ipzvpd.Location" : {
+                  "LocationCode" : "Ufcs-P0-C24"
               }
           }
       }
