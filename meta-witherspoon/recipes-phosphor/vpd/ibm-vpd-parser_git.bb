@@ -6,6 +6,8 @@ PV = "1.0+git${SRCPV}"
 inherit meson pkgconfig
 inherit obmc-phosphor-systemd
 
+FILESEXTRAPATHS_prepend := "${THISDIR}/ibm-vpd-parser:"
+
 DEPENDS += "sdbusplus"
 DEPENDS += "phosphor-logging"
 DEPENDS += "autoconf-archive-native"
@@ -18,6 +20,8 @@ require ${PN}.inc
 SRC_URI += " file://70-ibm-vpd-parser.rules"
 SRC_URI += " file://vpd_inventory.json"
 SRC_URI += " file://com.ibm.vpd.Manager.service"
+SRC_URI += " file://50001001.json"
+SRC_URI += " file://50001000.json"
 
 S = "${WORKDIR}/git"
 
@@ -36,4 +40,6 @@ do_install_append() {
     install ${WORKDIR}/70-ibm-vpd-parser.rules ${D}/${base_libdir}/udev/rules.d/
     install ${WORKDIR}/*.json ${D}${datadir}/vpd/
     install -m 0644 ${WORKDIR}/com.ibm.vpd.Manager.service ${D}/${datadir}/dbus-1/system-services
+    install -d ${D}/var/lib/vpd
+    ln -s ${datadir}/vpd/vpd_inventory.json ${D}/var/lib/vpd/vpd_inventory.json
 }
