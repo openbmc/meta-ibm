@@ -1,1 +1,1 @@
-PACKAGECONFIG_append_romulus = " verify_signature"
+EXTRA_OEMESON_append_romulus = " -Dverify-signature=enabled"

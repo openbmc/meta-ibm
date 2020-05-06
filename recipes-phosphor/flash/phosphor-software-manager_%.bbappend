@@ -9,10 +9,10 @@ BMC_KERNEL_MTD_rainier = "bmc"
 BMC_KERNEL_MTD_mihawk = "bmc"
 
 # Enable signature verification
-PACKAGECONFIG_append_ibm-ac-server = " verify_signature"
-PACKAGECONFIG_append_rainier = " verify_signature"
-PACKAGECONFIG_append_mihawk = " verify_signature"
+EXTRA_OEMESON_append_ibm-ac-server = "-Dverify-signature=enabled"
+EXTRA_OEMESON_append_rainier = " -Dverify-signature=enabled"
+EXTRA_OEMESON_append_mihawk = " -Dverify-signature=enabled"
 
 # Enable sync of persistent files to the alternate BMC chip
-PACKAGECONFIG_append_ibm-ac-server = " sync_bmc_files"
-PACKAGECONFIG_append_mihawk = " sync_bmc_files"
+EXTRA_OEMESON_append_ibm-ac-server = " -Dsync-bmc-files=enabled"
+PACKAGECONFIG_append_mihawk = " -Dsync-bmc-files=enabled"
