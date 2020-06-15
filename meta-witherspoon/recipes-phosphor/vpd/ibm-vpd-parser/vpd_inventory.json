@@ -190,6 +190,9 @@
     "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a400.i2c-bus/i2c-7/7-0051/7-00510/nvmem": [
       {
         "inventoryPath": "/system/chassis/motherboard/lcd_op_panel_hill",
+        "present": "SLOT0_PRSNT_EN_RSVD",
+        "preAction":"SET_THE_PIN_1",
+        "postAction":"RESET_THE_PIN_2",
         "extraInterfaces": {
           "xyz.openbmc_project.Inventory.Item.Panel": null,
           "com.ibm.ipzvpd.Location" : {
