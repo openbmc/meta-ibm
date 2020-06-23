@@ -1,0 +1,13 @@
+[Unit]
+Description=IBM VMI certificate manager
+
+[Service]
+ExecStart=/usr/bin/env vmi-certificate-manager
+SyslogIdentifier=vmi-certificate-manager
+Restart=always
+
+Type=dbus
+BusName=com.ibm.VMICertificate
+
+[Install]
+WantedBy=multi-user.target
