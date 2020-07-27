@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# config: 2 20
+#
+# 2 = User initiated dump, 20 = priority
+
+# @brief: Collect the PEL files
+
+. $DREPORT_INCLUDE/functions
+
+dir="/var/lib/phosphor-logging/extensions/pels/logs"
+desc="PEL Files"
+add_copy_file "$dir" "$desc"
