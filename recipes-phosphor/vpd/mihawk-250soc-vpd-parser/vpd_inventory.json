@@ -1,0 +1,78 @@
+{
+  "commonInterfaces": {
+    "xyz.openbmc_project.Inventory.Decorator.Asset": {
+      "PartNumber": {
+        "keywordName": "PN"
+      },
+      "SerialNumber": {
+        "keywordName": "SN"
+      }
+    }
+  },
+  "frus": {
+    "/sys/bus/i2c/devices/231-0050/eeprom": [
+    {
+      "inventoryPath": "/system/chassis/motherboard/250soc2",
+      "extraInterfaces": {
+        "xyz.openbmc_project.Inventory.Item.250Soc2": null
+        }
+      }
+    ],
+    "/sys/bus/i2c/devices/232-0050/eeprom": [
+    {
+      "inventoryPath": "/system/chassis/motherboard/250soc3",
+      "extraInterfaces": {
+        "xyz.openbmc_project.Inventory.Item.250Soc3": null
+        }
+      }
+    ],
+    "/sys/bus/i2c/devices/235-0050/eeprom": [
+    {
+      "inventoryPath": "/system/chassis/motherboard/250soc0",
+      "extraInterfaces": {
+        "xyz.openbmc_project.Inventory.Item.250Soc0": null
+        }
+      }
+    ],
+    "/sys/bus/i2c/devices/236-0050/eeprom": [
+    {
+      "inventoryPath": "/system/chassis/motherboard/250soc1",
+      "extraInterfaces": {
+        "xyz.openbmc_project.Inventory.Item.250Soc1": null
+        }
+      }
+    ],
+	"/sys/bus/i2c/devices/239-0050/eeprom": [
+    {
+      "inventoryPath": "/system/chassis/motherboard/250soc6",
+      "extraInterfaces": {
+        "xyz.openbmc_project.Inventory.Item.250Soc6": null
+        }
+      }
+    ],
+    "/sys/bus/i2c/devices/240-0050/eeprom": [
+    {
+      "inventoryPath": "/system/chassis/motherboard/250soc7",
+      "extraInterfaces": {
+        "xyz.openbmc_project.Inventory.Item.250Soc7": null
+        }
+      }
+    ],
+    "/sys/bus/i2c/devices/243-0050/eeprom": [
+    {
+      "inventoryPath": "/system/chassis/motherboard/250sco5",
+      "extraInterfaces": {
+        "xyz.openbmc_project.Inventory.Item.250Soc5": null
+        }
+      }
+    ],
+    "/sys/bus/i2c/devices/244-0050/eeprom": [
+    {
+      "inventoryPath": "/system/chassis/motherboard/250soc4",
+      "extraInterfaces": {
+        "xyz.openbmc_project.Inventory.Item.250Soc4": null
+        }
+      }
+    ]
+  }
+}
