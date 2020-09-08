@@ -90,7 +90,7 @@
         }
       }
     ],
-    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a480.i2c-bus/i2c-8/8-0051/8-00510/nvmem": [
+    "/sys/bus/i2c/drivers/at24/8-0051/8-00510/nvmem": [
       {
         "inventoryPath": "/system/chassis/motherboard/ebmc_card_bmc",
         "extraInterfaces": {
@@ -165,7 +165,7 @@
         }
       }
     ],
-    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a080.i2c-bus/i2c-0/0-0051/0-00510/nvmem": [
+    "/sys/bus/i2c/drivers/at24/0-0051/0-00510/nvmem": [
       {
         "inventoryPath": "/system/chassis/motherboard/tpm_wilson",
         "extraInterfaces": {
@@ -176,7 +176,7 @@
         }
       }
     ],
-    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a400.i2c-bus/i2c-7/7-0050/7-00500/nvmem": [
+    "/sys/bus/i2c/drivers/at24/7-0050/7-00500/nvmem": [
       {
         "inventoryPath": "/system/chassis/motherboard/base_op_panel_blyth",
         "extraInterfaces": {
@@ -187,7 +187,7 @@
         }
       }
     ],
-    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a400.i2c-bus/i2c-7/7-0051/7-00510/nvmem": [
+    "/sys/bus/i2c/drivers/at24/7-0051/7-00510/nvmem": [
       {
         "inventoryPath": "/system/chassis/motherboard/lcd_op_panel_hill",
         "extraInterfaces": {
@@ -198,7 +198,7 @@
         }
       }
     ],
-    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a500.i2c-bus/i2c-9/9-0050/9-00500/nvmem": [
+    "/sys/bus/i2c/drivers/at24/9-0050/9-00500/nvmem": [
       {
         "inventoryPath": "/system/chassis/motherboard/vdd_vrm0",
         "extraInterfaces": {
@@ -209,7 +209,7 @@
         }
       }
     ],
-    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a580.i2c-bus/i2c-10/10-0050/10-00500/nvmem": [
+    "/sys/bus/i2c/drivers/at24/10-0050/10-00500/nvmem": [
       {
         "inventoryPath": "/system/chassis/motherboard/vdd_vrm1",
         "extraInterfaces": {
@@ -220,7 +220,7 @@
         }
       }
     ],
-    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a280.i2c-bus/i2c-4/4-0050/4-00500/nvmem": [
+    "/sys/bus/i2c/drivers/at24/4-0050/4-00500/nvmem": [
       {
         "inventoryPath": "/system/chassis/motherboard/pcieslot_x160/pcie_cable_card",
         "extraInterfaces": {
@@ -231,7 +231,7 @@
         }
       }
     ],
-    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a300.i2c-bus/i2c-5/5-0050/5-00500/nvmem": [
+    "/sys/bus/i2c/drivers/at24/5-0050/5-00500/nvmem": [
       {
         "inventoryPath": "/system/chassis/motherboard/pcieslot_x161/pcie_cable_card",
         "extraInterfaces": {
@@ -242,7 +242,7 @@
         }
       }
     ],
-    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a300.i2c-bus/i2c-5/5-0051/5-00510/nvmem": [
+    "/sys/bus/i2c/drivers/at24/5-0051/5-00510/nvmem": [
       {
         "inventoryPath": "/system/chassis/motherboard/pcieslot_x162/pcie_cable_card",
         "extraInterfaces": {
@@ -253,7 +253,7 @@
         }
       }
     ],
-    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a600.i2c-bus/i2c-11/11-0050/5-00500/nvmem": [
+    "/sys/bus/i2c/drivers/at24/11-0050/5-00500/nvmem": [
       {
         "inventoryPath": "/system/chassis/motherboard/pcieslot_x163/pcie_cable_card",
         "extraInterfaces": {
@@ -264,7 +264,7 @@
         }
       }
     ],
-    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a280.i2c-bus/i2c-4/4-0052/4-00520/nvmem": [
+    "/sys/bus/i2c/drivers/at24/4-0052/4-00520/nvmem": [
       {
         "inventoryPath": "/system/chassis/motherboard/pcieslot_x84/pcie_cable_card",
         "extraInterfaces": {
@@ -275,7 +275,7 @@
         }
       }
     ],
-    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a380.i2c-bus/i2c-6/6-0052/6-00520/nvmem": [
+    "/sys/bus/i2c/drivers/at24/6-0052/6-00520/nvmem": [
       {
         "inventoryPath": "/system/chassis/motherboard/pcieslot_x85/pcie_cable_card",
         "extraInterfaces": {
@@ -286,7 +286,7 @@
         }
       }
     ],
-    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a380.i2c-bus/i2c-6/6-0050/6-00500/nvmem": [
+    "/sys/bus/i2c/drivers/at24/6-0050/6-00500/nvmem": [
       {
         "inventoryPath": "/system/chassis/motherboard/pcieslot_x86/pcie_cable_card",
         "extraInterfaces": {
@@ -297,7 +297,7 @@
         }
       }
     ],
-    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a600.i2c-bus/i2c-11/11-0051/11-00510/nvmem": [
+    "/sys/bus/i2c/drivers/at24/11-0051/11-00510/nvmem": [
       {
         "inventoryPath": "/system/chassis/motherboard/pcieslot_x87/pcie_cable_card",
         "extraInterfaces": {
@@ -308,7 +308,7 @@
         }
       }
     ],
-    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a280.i2c-bus/i2c-4/4-0051/4-00510/nvmem": [
+    "/sys/bus/i2c/drivers/at24/4-0051/4-00510/nvmem": [
       {
         "inventoryPath": "/system/chassis/motherboard/pcieslot_x88/pcie_cable_card",
         "extraInterfaces": {
@@ -319,7 +319,7 @@
         }
       }
     ],
-    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a380.i2c-bus/i2c-6/6-0051/6-00510/nvmem": [
+    "/sys/bus/i2c/drivers/at24/6-0051/6-00510/nvmem": [
       {
         "inventoryPath": "/system/chassis/motherboard/pcieslot_x89/pcie_cable_card",
         "extraInterfaces": {
@@ -330,7 +330,7 @@
         }
       }
     ],
-    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a700.i2c-bus/i2c-13/13-0050/13-00500/nvmem": [
+    "/sys/bus/i2c/drivers/at24/13-0050/13-00500/nvmem": [
       {
 	"inventoryPath": "/system/chassis/motherboard/dasd_card_pyramid0",
         "extraInterfaces": {
@@ -341,7 +341,7 @@
         }
       }
     ],
-    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a780.i2c-bus/i2c-14/14-0050/14-00500/nvmem": [
+    "/sys/bus/i2c/drivers/at24/14-0050/14-00500/nvmem": [
       {
         "inventoryPath": "/system/chassis/motherboard/dasd_card_pyramid1",
         "extraInterfaces": {
@@ -352,7 +352,7 @@
         }
       }
     ],
-    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a800.i2c-bus/i2c-15/15-0050/15-00500/nvmem": [
+    "/sys/bus/i2c/drivers/at24/15-0050/15-00500/nvmem": [
       {
         "inventoryPath": "/system/chassis/motherboard/dasd_card_pyramid2",
         "extraInterfaces": {
