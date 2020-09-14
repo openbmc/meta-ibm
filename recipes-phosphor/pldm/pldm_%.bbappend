@@ -4,6 +4,8 @@ EXTRA_OEMESON_append = " \
         -Doem-ibm=enabled \
         "
 
+RDEPENDS_${PN} = "squashfs-tools"
+
 SRC_URI += "file://fileTable.json"
 SRC_URI += "file://enum_attrs.json"
 SRC_URI += "file://11.json"
