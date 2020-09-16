@@ -16,6 +16,23 @@
       "revId": "8d029483d3663156d6ba0737985a2ccb6e84ae83",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bc378baa_0005f04f",
+        "filename": "recipes-phosphor/pldm/pldm_%.bbappend",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2020-09-16T12:23:10Z",
+      "side": 1,
+      "message": "Since this is conditional on -Doem-ibm we should have a packageconfig for this:\n\n PACKAGECONFIG ??\u003d \"oem-ibm\"\n PACKAGECONFIG[oem-ibm] \u003d \"-Doem-ibm\u003dyes, -Doem-ibm\u003dno, , squashfs-tools\"",
+      "revId": "8d029483d3663156d6ba0737985a2ccb6e84ae83",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }
