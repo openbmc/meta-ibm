@@ -3,6 +3,9 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/${BPN}:"
 PACKAGECONFIG_append_rainier = " host-dump-offload-pldm"
 PACKAGECONFIG_append_witherspoon-tacoma = " host-dump-offload-pldm"
 
+PACKAGECONFIG_append_rainier = " host-dump-system-dump"
+PACKAGECONFIG_append_witherspoon-tacoma = " host-dump-system-dump"
+
 SRC_URI += "file://plugins.d/ibm_elogall"
 SRC_URI += "file://plugins.d/pels"
 
