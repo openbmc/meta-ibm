@@ -3,3 +3,9 @@
       Properties:
           Enabled:
               Default: 'true'
+
+/xyz/openbmc_project/dump/disable_system_dump:
+    - Interface: xyz.openbmc_project.Object.Enable
+      Properties:
+          Enabled:
+              Default: 'true'
