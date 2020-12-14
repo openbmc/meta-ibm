@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4bb71e52_86e676fd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2020-12-14T19:04:43Z",
+      "side": 1,
+      "message": "There are a whole pile of other seemingly unrelated changes in this patch.  A quick glance shows:\n\n1 - what you actually say here\n2 - adding help/displayname\n3 - s/Temp/Perm\n4 - new network attributes maybe?\n\nPlease break these up into different commits, each one with a commit message that briefly explains why the change was made.  We do this for several reasons, the main one being to avoid needless questions back and forth between the you and the reviewers such as \"did you mean to make this change or was it a mistake?\"",
+      "revId": "6935c526c62e92db70868f20a3fd91129b83d934",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    }
+  ]
+}
