@@ -18,6 +18,9 @@ EXTRA_IBM_LOGGING_PKGS_witherspoon = "ibm-logging"
 EXTRA_IBM_LOGGING_PKGS_witherspoon-tacoma = ""
 EXTRA_IBM_LOGGING_PKGS_mihawk = "ibm-logging"
 
+# remove so things fit in available flash space
+IMAGE_FEATURES_remove_witherspoon = "obmc-user-mgmt-ldap"
+
 RDEPENDS_${PN}-inventory_append_ibm-ac-server = " openpower-fru-vpd openpower-occ-control phosphor-cooling-type virtual/obmc-gpio-presence"
 RDEPENDS_${PN}-inventory_append_rainier = " openpower-fru-vpd openpower-occ-control virtual/obmc-gpio-presence"
 RDEPENDS_${PN}-inventory_append_mihawk = " openpower-fru-vpd openpower-occ-control virtual/obmc-gpio-presence id-button phosphor-cooling-type"
