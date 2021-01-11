@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "514449d3_17e8fa06",
+        "filename": "recipes-phosphor/power/phosphor-power_%.bbappend",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-01-11T20:50:16Z",
+      "side": 1,
+      "message": "isn\u0027t this application built by default?  There is a package for it in the main recipe.  What goes in the package if you do a build without meta-ibm?\n\nI might be missing something but I expect the right thing here is to just enable this by default, either in the base recipe or in your repo build system (meson).",
+      "revId": "192b44c3de4885d2899c9e29e69e7a5b16aa1ccb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    }
+  ]
+}
