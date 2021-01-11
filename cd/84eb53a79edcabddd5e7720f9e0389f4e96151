@@ -1,0 +1,12 @@
+Code-Review+2: Brad Bishop <bradleyb@fuzziesquirrel.com>
+Code-Review+1: Andrew Geissler <geissonator@yahoo.com>
+Code-Review+1: Matt Spinler <spinler@us.ibm.com>
+Code-Review+1: Bruce Mitchell <Bruce.Mitchell@ibm.com>
+Verified+1: OpenBMC CI <openbmcbump-ci@yahoo.com>
+Ok-To-Test+1: Bruce Mitchell <Bruce.Mitchell@ibm.com>
+Ok-To-Test+1: OpenBMC CI <openbmcbump-ci@yahoo.com>
+Submitted-by: Brad Bishop <bradleyb@fuzziesquirrel.com>
+Submitted-at: Mon, 11 Jan 2021 20:52:09 +0000
+Reviewed-on: https://gerrit.openbmc-project.xyz/c/openbmc/meta-ibm/+/39471
+Project: openbmc/meta-ibm
+Branch: refs/heads/master
