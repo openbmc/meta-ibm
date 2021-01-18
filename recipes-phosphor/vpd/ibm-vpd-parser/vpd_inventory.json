@@ -1,0 +1,77 @@
+{
+  "commonInterfaces": {
+    "xyz.openbmc_project.Inventory.Decorator.Asset": {
+      "PartNumber": {
+        "recordName": "VINI",
+        "keywordName": "PN"
+      },
+      "SerialNumber": {
+        "recordName": "VINI",
+        "keywordName": "SN"
+      },
+      "BuildDate": {
+        "recordName": "VR10",
+        "keywordName": "DC",
+        "encoding": "DATE"
+      }
+    },
+    "xyz.openbmc_project.Inventory.Item": {
+      "PrettyName": {
+        "recordName": "VINI",
+        "keywordName": "DR"
+      },
+     "Present": true
+    }
+  },
+  "frus": {
+    "/sys/bus/i2c/drivers/at24/8-0050/8-00500/nvmem": [
+      {
+        "inventoryPath": "/system/chassis/motherboard",
+        "isSystemVpd": true,
+        "extraInterfaces": {
+          "xyz.openbmc_project.Inventory.Item.Board.Motherboard": null,
+          "com.ibm.ipzvpd.Location" : {
+              "LocationCode" : "Ufcs-P0"
+          }
+        }
+      },
+      {
+        "inventoryPath": "/system",
+        "inherit": false,
+        "isSystemVpd": true,
+        "copyRecords": ["VSYS"],
+        "extraInterfaces": {
+          "xyz.openbmc_project.Inventory.Item.System": null,
+          "xyz.openbmc_project.Inventory.Decorator.Asset": {
+            "SerialNumber": {
+              "recordName": "VSYS",
+              "keywordName": "SE"
+            },
+            "Model": {
+              "recordName": "VSYS",
+              "keywordName": "TM"
+            },
+            "SubModel": {
+              "recordName": "VSYS",
+              "keywordName": "BR"
+            }
+          },
+          "com.ibm.ipzvpd.Location" : {
+              "LocationCode" : "Umts"
+          }
+        }
+      },
+      {
+        "inventoryPath": "/system/chassis",
+        "inherit": false,
+        "isSystemVpd": true,
+        "extraInterfaces": {
+          "xyz.openbmc_project.Inventory.Item.Chassis": null,
+          "com.ibm.ipzvpd.Location" : {
+              "LocationCode" : "Ufcs"
+          }
+        }
+      }
+    ]
+  }
+}
