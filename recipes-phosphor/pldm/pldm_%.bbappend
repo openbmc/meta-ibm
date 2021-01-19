@@ -4,16 +4,16 @@ EXTRA_OEMESON_append = " \
         -Doem-ibm=enabled \
         "
 
-SRC_URI += "file://fileTable.json"
-SRC_URI += "file://enum_attrs.json"
-SRC_URI += "file://11.json"
-SRC_URI += "file://host_eid"
+EXTRA_OEMESON_append_rainier = " \
+        -Doem-ibm-dma-maxsize=8384512 \
+        "
+EXTRA_OEMESON_append_witherspoon-tacoma = " \
+         -Doem-ibm-dma-maxsize=8384512 \
+         "
+inherit obmc-phosphor-systemd
+SYSTEMD_SERVICE_${PN}_append = " pldmd.service"
+SYSTEMD_SERVICE_${PN}_append = " pldm-create-phyp-nvram.service"
+SYSTEMD_SERVICE_${PN}_append = " pldm-create-phyp-nvram-cksum.service"
+SYSTEMD_ENVIRONMENT_FILE_${PN}_append = " pldmd"
 
-do_install_append() {
-        install -d ${D}${datadir}/pldm/bios/
-        install -d ${D}${datadir}/pldm/pdr/
-        install -m 0644 ${WORKDIR}/fileTable.json ${D}${datadir}/pldm/
-        install -m 0644 ${WORKDIR}/enum_attrs.json ${D}${datadir}/pldm/bios/
-        install -m 0644 ${WORKDIR}/11.json ${D}${datadir}/pldm/pdr/
-        install -m 0644 ${WORKDIR}/host_eid ${D}${datadir}/pldm/
-}
+
