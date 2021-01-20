@@ -16,6 +16,24 @@
       "revId": "6e73da87cd2cdaf224553a8085d4db94de488e0a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "345172c4_79987fea",
+        "filename": "recipes-phosphor/dbus/fan-policy.bb",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2021-01-20T18:47:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7fcd6f45_05182b4c",
+      "revId": "6e73da87cd2cdaf224553a8085d4db94de488e0a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }
