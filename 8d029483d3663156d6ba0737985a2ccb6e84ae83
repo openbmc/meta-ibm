@@ -33,6 +33,24 @@
       "revId": "8d029483d3663156d6ba0737985a2ccb6e84ae83",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6ee511_52ca0b98",
+        "filename": "recipes-phosphor/pldm/pldm_%.bbappend",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2021-01-21T21:42:05Z",
+      "side": 1,
+      "message": "Done. Thanks. I went with appending to PACKAGECONFIG in case other configs are added in the main recipe.",
+      "parentUuid": "bc378baa_0005f04f",
+      "revId": "8d029483d3663156d6ba0737985a2ccb6e84ae83",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }
