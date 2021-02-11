@@ -1,0 +1,21 @@
+[
+    {
+        "path": "system/chassis",
+        "endpoints":
+        [
+            {
+                "types":
+                {
+                    "fType": "assembly",
+                    "rType": "inventory"
+                },
+                "paths":
+                [
+                    "/xyz/openbmc_project/inventory/system/chassis/motherboard/vdd_vrm0",
+                    "/xyz/openbmc_project/inventory/system/chassis/motherboard/vdd_vrm1",
+                    "/xyz/openbmc_project/inventory/system/chassis/motherboard/tpm_wilson"
+                ]
+            }
+        ]
+    }
+]

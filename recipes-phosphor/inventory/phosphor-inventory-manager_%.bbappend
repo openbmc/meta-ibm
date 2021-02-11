@@ -2,6 +2,9 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 PACKAGECONFIG_append_ibm-ac-server = " associations"
 SRC_URI_append_ibm-ac-server = " file://associations.json"
 
+FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}/rainier:"
+PACKAGECONFIG_append_rainier = " associations"
+SRC_URI_append_rainier = " file://associations.json"
 
 DEPENDS_append_ibm-ac-server = " inventory-cleanup"
 
